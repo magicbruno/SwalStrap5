@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>PageTitle</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <style>
+        .navbar-brand {
+            height: 46px;
+        }
+
+        main>.container {
+            padding: 100px 15px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/file-man-custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark fm-light">
+        <div class="container justify-content-between">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                <svg id="Livello_1" class="me-2 h-100" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 435.93 485.88">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffa300;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M326.24,485.88H62.16c16.51-31,33.09-62.05,49.5-93.15,3.18-6,5.9-12.32,8.52-18.63,2-4.72.79-5.5-4-6.37-5.43-1-11.21-2.22-15.83-5C90.11,356.57,83,347.24,77.77,336.58a18.48,18.48,0,0,1-2.22-7.1c-.58-16.64.2-33.4,8.3-48.2,4.3-7.86,4-13.15-1.06-20-4.74-6.46-8.26-14-6-22.48a41.74,41.74,0,0,0-2.29-28.36c-5.69-12.77-12.22-25.15-18.24-37.77-5.76-12.08-14.35-19.23-28.6-18.22-5.5.39-9.85-2.21-12.23-7.78a7.42,7.42,0,0,0-4.75-3.48c-9.59-2-13.62-9-8.37-17.22A87.73,87.73,0,0,1,18.7,106.73c17.4-15,37.89-25,59.35-32.48C123.84,58.29,169.67,42.37,216,28,258,15,301,5.12,344.9.6a111.08,111.08,0,0,1,29.76.89c10.58,1.82,14.62,11,10.79,21-1.37,3.57-1.34,6.35,1.86,8.82,3.8,2.94,3.26,6.24.36,9.45-3.24,3.58-6.31,7.39-9.94,10.54-8.56,7.41-11.13,16.68-9.36,27.47A117.26,117.26,0,0,0,370.93,91c4.46,16.06,8.94,32.11,13.68,48.09a139.08,139.08,0,0,0,6.82,18.72c2,4.43,2.34,8.2-.56,12.13-3.31,4.47-3.41,9.23-2.54,14.67,1,5.93,1.62,12.42.14,18.08-2,7.57-2.11,14,3,20.14,2.24,2.67,4.24,5.58,6.67,8.07,10.62,10.83,21.23,21.67,32.09,32.24,6,5.85,6.22,13.05,5.24,20.34-.31,2.27-2.94,4.87-5.18,6.11a112.25,112.25,0,0,1-15.06,6.6c-7.88,2.94-10.9,7.46-10.22,15.81.39,4.65,1,12.35.68,17-.3,3.83-5.07,4.51-5.88,8.32-.48,2.26,2.87.92,3.6,2.92,2.18,6,1.45,15.23-3.38,20.14a21.11,21.11,0,0,0-3.95,6.33A11,11,0,0,0,397,378c7.41,10.92,3.15,26.36-7,32.18a228.42,228.42,0,0,1-41.87,18.59c-11.09,3.67-23.19,4.34-34.87,6.09-4.12.62-6.64,2.33-6.42,6.65.29,6,1,11.89,1.29,17.84.45,9.17,3.56,16.74,11.81,21.66A63.45,63.45,0,0,1,326.24,485.88Z" />
+                </svg>
+                <span class="h2 mt-n2 fw-light">sistem<span class="fw-bold">interattivi</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            </div>
+            <script>
+                (function (doc) {
+                    const targetElement = doc.querySelector('#navbarCollapse');
+                    fetch('menu.xml')
+                        .then(response => response.text())
+                        .then(result => targetElement.innerHTML = result)
+                        .catch(error => console.error(error));
+                })(document);
+            </script>
+        </div>
+    </nav>
+    <main class="flex-shink-0">
+        <div class="container">
+            <h1 class="mt-5">Viewer customization</h1>
+            <p class="lead">Simple template to start your design with</p>
+            <ul id="link-list" class="mb-4">
+                <li><a href="img/AlessandroScillitani.jpg" title="Alessandro Scillitani" data-fmviewer>Jpeg image (no
+                        gallery)</a></li>
+                <li><a href="img/AlessandroScillitani.jpg" title="Alessandro Scillitani" data-fmviewer="gal">Jpeg image
+                        (gallery 1))</a></li>
+                <li><a href="img/foto_di-nuzzo-fs8.png" data-fmviewer="gal2">Png image (2)</a></li>
+                <li><a href="https://primitivastorage.blob.core.windows.net/contenitore-primitiva/DOC_ASSICURAZIONI/doc_ass_4-2-2022_11-16-258.pdf"
+                        data-fmviewer="gal">Pdf</a></li>
+                <li><a href="img/100 anni Pietro Ingrao. Ingrao e la politica.mp4" data-fmviewer="gal">Video (gallery
+                        1)</a></li>
+                <li><a href="img/README.md" data-fmviewer="gal">Other file (gallery 1)</a></li>
+                <li><a href="img/oobe-bookend-cortanain-outro.gif" data-fmviewer="gal2">Gif image (gallery 2)</a></li>
+                <li><a href="img/documentando-archivio.svg" data-fmviewer="gal2">Svg image (gallery 2)</a></li>
+                <li><a href="https://documentando.org" data-fmviewer="gal" data-type="iframe">Forced type (gallery
+                        1)</a></li>
+                <li><a href="https://www.youtube.com/embed?v=zzE-kVadtNw" data-fmviewer="gal" data-type="iframe">Forced type (gallery
+                    1)</a></li>
+            </ul>
+            <p><button type="button" class="btn btn-primary me-2" id="btn-additem">Add item to gallery 1</button></p>
+            <p>
+                <strong>Note</strong>: If you dynamically append an <code>&lt;a&gt;</code> element that you want to be processed by the viewer, you must register 
+                    it calling viewer refresh method. See JavaScript code below.
+            </p>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs mt-4" id="code" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#html-panel" type="button" role="tab" aria-controls="html" 
+                aria-selected="true">HTML</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="javascript-tab" data-bs-toggle="tab" data-bs-target="#javascript-panel" type="button" role="tab" aria-controls="JavaScript" 
+                aria-selected="false">JavaScript</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#css-panel" type="button" role="tab" aria-controls="css" 
+                aria-selected="false">CSS</button>
+              </li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="html-panel" role="tabpanel" aria-labelledby="html-tab"> 
+             <pre class="border"><code class="hljs language-html">
+    &lt;div class=&quot;fm-viewer off-screen&quot; id=&quot;theViewer&quot; data-action=&quot;close-viewer&quot;&gt;&#13;&#10;        &lt;a href=&quot;javascript:;&quot; data-action=&quot;close-viewer&quot;&gt;&#13;&#10;            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;svg id=&quot;a&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 180 180&quot;&gt;&#13;&#10;                &lt;defs&gt;&#13;&#10;                    &lt;style&gt;&#13;&#10;                        .b {&#13;&#10;                            fill: none;&#13;&#10;                            stroke: #fff;&#13;&#10;                            stroke-linecap: round;&#13;&#10;                            stroke-miterlimit: 10;&#13;&#10;                            stroke-width: 8.68px;&#13;&#10;                        }&#13;&#10;                    &lt;/style&gt;&#13;&#10;                &lt;/defs&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;39.9&quot; y1=&quot;38.47&quot; x2=&quot;140.53&quot; y2=&quot;139.1&quot; /&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;39.47&quot; y1=&quot;139.53&quot; x2=&quot;140.1&quot; y2=&quot;38.9&quot; /&gt;&#13;&#10;            &lt;/svg&gt;&#13;&#10;        &lt;/a&gt;&#13;&#10;        &lt;a href=&quot;javascript:;&quot; data-action=&quot;next&quot;&gt;&#13;&#10;            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;svg id=&quot;a&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 180 180&quot;&gt;&#13;&#10;                &lt;defs&gt;&#13;&#10;                    &lt;style&gt;&#13;&#10;                        .b {&#13;&#10;                            fill: none;&#13;&#10;                            stroke: #fff;&#13;&#10;                            stroke-linecap: round;&#13;&#10;                            stroke-miterlimit: 10;&#13;&#10;                            stroke-width: 8.75px;&#13;&#10;                        }&#13;&#10;                    &lt;/style&gt;&#13;&#10;                &lt;/defs&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;64.84&quot; y1=&quot;38.28&quot; x2=&quot;115.6&quot; y2=&quot;89.03&quot; /&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;64.4&quot; y1=&quot;140.22&quot; x2=&quot;115.6&quot; y2=&quot;89.03&quot; /&gt;&#13;&#10;            &lt;/svg&gt;&#13;&#10;        &lt;/a&gt;&#13;&#10;        &lt;a href=&quot;javascript:;&quot; data-action=&quot;previous&quot;&gt;&#13;&#10;            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;svg id=&quot;a&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 180 180&quot;&gt;&#13;&#10;                &lt;defs&gt;&#13;&#10;                    &lt;style&gt;&#13;&#10;                        .b {&#13;&#10;                            fill: none;&#13;&#10;                            stroke: #fff;&#13;&#10;                            stroke-linecap: round;&#13;&#10;                            stroke-miterlimit: 10;&#13;&#10;                            stroke-width: 8.79px;&#13;&#10;                        }&#13;&#10;                    &lt;/style&gt;&#13;&#10;                &lt;/defs&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;115.27&quot; y1=&quot;38.05&quot; x2=&quot;64.29&quot; y2=&quot;89.03&quot; /&gt;&#13;&#10;                &lt;line class=&quot;b&quot; x1=&quot;115.71&quot; y1=&quot;140.45&quot; x2=&quot;64.29&quot; y2=&quot;89.03&quot; /&gt;&#13;&#10;            &lt;/svg&gt;&#13;&#10;        &lt;/a&gt;&#13;&#10;        &lt;footer&gt;&#13;&#10;            &lt;div class=&quot;viewer-title d-none&quot;&gt;&lt;/div&gt;&#13;&#10;        &lt;/footer&gt;&#13;&#10;    &lt;/div&gt;
+                </code></pre>                 
+              </div>
+              <div class="tab-pane" id="javascript-panel" role="tabpanel" aria-labelledby="javascript-tab"> 
+            <pre class="border"><code class="hljs language-JavaScript">                    
+    (function (win) {
+        "use strict";
+        // Initialize the viewer using '#theViewer' element        
+        win.TheViewer = new FM_Viewer('#theViewer');
+        
+        document.getElementById('btn-additem').addEventListener('click', () => {
+            // Adding an element and registering it to the viewer calling refresh method
+            let li = document.createElement('li');
+            li.innerHTML = `<a href="img/40-passi-01.jpg" title="40 passi" data-fmviewer="gal">Added just now!</a>`;
+            document.getElementById('link-list').appendChild(li);
+            TheViewer.refresh();
+        });
+    })(window);
+                </code></pre>
+              </div>
+              <div class="tab-pane" id="css-panel" role="tabpanel" aria-labelledby="css-tab">
+            <pre class="border"><code class="hljs language-css">
+    /* Customized CSS*/
+    .fm-viewer .btn {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .fm-viewer .btn {
+            transition: none;
+        }
+    }
+
+    .fm-viewer .btn:hover {
+        color: #212529;
+    }
+
+    .fm-viewer .btn:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    .fm-viewer .btn:disabled,
+    .fm-viewer .btn.disabled {
+        pointer-events: none;
+        opacity: 0.65;
+    }
+
+    .fm-viewer .btn-dark {
+        background: transparent;
+        color: #f6f6f6;
+        padding-left: 12px;
+        padding-right: 12px;
+        border: 0;
+    }
+
+    .fm-viewer .btn-dark:hover {
+        background: #444;
+    }
+
+    .fm-viewer .btn-warning {
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .fm-viewer .btn-warning:hover {
+        color: #000;
+        background-color: #ffca2c;
+        border-color: #ffc720;
+    }
+
+    .fm-viewer .btn-warning:focus {
+        color: #000;
+        background-color: #ffca2c;
+        border-color: #ffc720;
+        box-shadow: 0 0 0 0.25rem rgba(217, 164, 6, 0.5);
+    }
+
+    .fm-viewer .btn-warning:active {
+        color: #000;
+        background-color: #ffcd39;
+        border-color: #ffc720;
+    }
+
+    .fm-viewer .btn-warning:disabled,
+    .fm-viewer .btn-warning.disabled {
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .fm-viewer .text-white {
+        color: white !important;
+    }
+
+    .fm-viewer .text-center {
+        text-align: center !important;
+    }
+
+    .fm-viewer .d-none {
+        display: none !important;
+    }
+
+    @keyframes spinner-border {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .fm-viewer {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1050;
+        transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fm-viewer.off-screen {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    .fm-viewer .viewer-content {
+        transition: all 0.4s;
+    }
+
+    .fm-viewer .viewer-content.fade-in,
+    .fm-viewer .viewer-content.fade-out,
+    .fm-viewer .viewer-content.fade-right,
+    .fm-viewer .viewer-content.fade-left {
+        opacity: 0;
+        transition: all 0.4s;
+    }
+
+    .fm-viewer .viewer-content.fade-in,
+    .fm-viewer .viewer-content.fade-right {
+        transform: translateX(200px);
+    }
+
+    .fm-viewer .viewer-content.fade-out,
+    .fm-viewer .viewer-content.fade-left {
+        transform: translateX(-200px);
+    }
+
+    .fm-viewer img.viewer-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .fm-viewer iframe.viewer-content {
+        width: 90%;
+        height: 80%;
+        border: 0;
+        display: block;
+    }
+
+    .fm-viewer video.viewer-content {
+        width: 90%;
+        height: auto;
+    }
+
+    .fm-viewer.loading::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2.3rem;
+        height: 2.3rem;
+        top: calc(50% - 1.1rem);
+        left: calc(50% - 1.1rem);
+        border: 6px solid white;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: 0.7s linear infinite spinner-border;
+    }
+
+    .fm-viewer a[data-action] {
+        z-index: 1060;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        transition: all 0.4s;
+        position: absolute;
+        border: 1px #fff solid;
+    }
+
+    .fm-viewer a[data-action]:hover {
+        background-color: #000;
+    }
+
+    .fm-viewer a[data-action=close-viewer] {
+        top: 10px;
+        right: 10px;
+    }
+
+    .fm-viewer a[data-action=next] {
+        top: calc(50% - 15px);
+        right: 10px;
+    }
+
+    .fm-viewer a[data-action=previous] {
+        top: calc(50% - 15px);
+        left: 10px;
+    }
+
+    .fm-viewer footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        padding-bottom: 1rem;
+    }
+
+    .fm-viewer footer .viewer-title {
+        margin: 0 auto;
+        display: block;
+        padding: 0.25rem 1rem;
+        color: white;
+        border: 1px solid #fff;
+        background-color: #000;
+    }
+                </code></pre>                  
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="fm-viewer off-screen" id="theViewer" data-action="close-viewer">
+        <a href="javascript:;" data-action="close-viewer">
+            <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                <defs>
+                    <style>
+                        .b {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                            stroke-width: 8.68px;
+                        }
+                    </style>
+                </defs>
+                <line class="b" x1="39.9" y1="38.47" x2="140.53" y2="139.1" />
+                <line class="b" x1="39.47" y1="139.53" x2="140.1" y2="38.9" />
+            </svg>
+        </a>
+        <a href="javascript:;" data-action="next">
+            <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                <defs>
+                    <style>
+                        .b {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                            stroke-width: 8.75px;
+                        }
+                    </style>
+                </defs>
+                <line class="b" x1="64.84" y1="38.28" x2="115.6" y2="89.03" />
+                <line class="b" x1="64.4" y1="140.22" x2="115.6" y2="89.03" />
+            </svg>
+        </a>
+        <a href="javascript:;" data-action="previous">
+            <?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+                <defs>
+                    <style>
+                        .b {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                            stroke-width: 8.79px;
+                        }
+                    </style>
+                </defs>
+                <line class="b" x1="115.27" y1="38.05" x2="64.29" y2="89.03" />
+                <line class="b" x1="115.71" y1="140.45" x2="64.29" y2="89.03" />
+            </svg>
+        </a>
+        <footer>
+            <div class="viewer-title d-none"></div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+    <script src="assets/js/FM_Viewer.js"></script>
+    <script>
+        (function (win) {
+            "use strict";
+            win.TheViewer = new FM_Viewer('#theViewer');
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        })(window);
+        (function () {
+            "use-strict";
+            document.getElementById('btn-additem').addEventListener('click', () => {
+                // Adding an element and registering it to the viewer calling refresh method
+                let li = document.createElement('li');
+                let w = Math.floor(Math.random() * 500 + 1440);
+                let h = Math.floor(Math.random() * 200 + 880);
+                let any = 'animals';
+                li.innerHTML = `<a href="http://placeimg.com/${w}/${h}/${any}" title="Random image from placeimage.com" data-fmviewer="gal" data-type="image">Random image from placeimage.co</a>`;
+                document.getElementById('link-list').appendChild(li);
+                TheViewer.refresh();
+            });
+        })()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "@magicbruno/fm_viewer",
+  "version": "1.0.1",
+  "description": "Simple web file viewer",
+  "main": "FM_Viewer.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicbruno/FM_Viewer.git"
+  },
+  "author": "Bruno Migliaretti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicbruno/FM_Viewer/issues"
+  },
+  "homepage": "https://github.com/magicbruno/FM_Viewer#readme",
+  "dependencies": {
+  },
+  "keywords": ["fancybox","lightbox","file-viewer", "fileviewer"],
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "file-saver": "^2.0.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-footer": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.6.0",
+    "sass": "^1.49.9",
+    "gulp-markdown": "^6.0.0"
+  },
+  "publishConfig": {
+    "@magicbruno:registry": "https://registry.npmjs.org"
+  }
+}

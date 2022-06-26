@@ -1,0 +1,45 @@
+.fm-viewer {
+    .fm-navbar.navbar, .fm-navbar {
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        .viewer-title {
+            margin: 0;
+            padding: 0 .75rem;
+            color: white;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-flow: row nowrap;
+            
+        }
+    }
+    .fm-navbar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+
+        .fm-navbar-nav {
+            list-style: none;
+            display: flex;
+            flex-flow: row nowrap;
+            padding:0;
+            margin:0;
+            svg {
+                display: block;
+                height: 1.2rem;
+            }
+            .btn {
+                padding: 0.75rem;
+                border-radius: 0;
+                margin: 0 .25rem;
+            }
+        }
+    }
+}
