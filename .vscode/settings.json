@@ -6,6 +6,9 @@
     ],
     "svg.preview.background": "dark-transparent",
     "cSpell.words": [
-        "Migliaretti"
+        "Migliaretti",
+        "Swal",
+        "swalstrap",
+        "Sweetalert"
     ]
 }

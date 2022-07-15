@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet alert test</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css'
+        integrity='sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw=='
+        crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.js'
+        integrity='sha512-+61ddvnb6TsTTbtQ9wTsJKRbAqp7FWq6DvfOEiogsJe8b+FHG9U9Wm5p9XR6VuN06JlYeahufZiWPO7laKCWhw=='
+        crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="../docs/assets/css/swalstrap.css" />
+</head>
+
+<body>
+    <div class="mb-4 bg-dark text-white rounded-0">
+        <div class="container py-5">
+            <h1 class="display-3 mb-4">Sweetalert 2 for Bootstrap 5</h1>
+            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#modelId">
+                Launch
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg" data-action="show-toast">
+                Show toast
+            </button>
+
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content pb-3 px-0">
+                <div class="modal-header py-0 border-0 px-3 mt-3 mb-1">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-0">
+                    <div class="container-fluid d-flex flex-column">
+                        <div class="swal-bs-icon-container" data-swalstrap="icon">
+                            <div class="swal2-icon swal2-warning swal2-icon-show d-flex">
+                                <div class="swal2-icon-content">!</div>
+                            </div>
+                        </div>
+                        <img data-swalstrap="image" src="https://picsum.photos/300/200"
+                            class="img-fluid mx-auto mt-3 mb-1">
+                        <div data-swalstrap="title" class="text-center h2 mt-3 mb-1">Titolo</div>
+                        <div data-swalstrap="text" class="text-center lead">Lorem ipsum dolor, sit ?</div>
+                        <input data-swalstrap="input" class="form-control form-control-lg mt-3 mb-1" placeholder=""
+                            type="text">
+                        <select data-swalstrap="select" class="form select form-select-lg mt-3 mb-1"></select>
+                        <div class="form-check form-check-inline mt-3 mb-1 lead d-flex justify-content-center"
+                            data-swalstrap="checkbox">
+                            <input class="form-check-input" type="checkbox" id="pipo" value="{3:option1}">
+                            <label class="form-check-label ms-2" for="pipo">first</label>
+                        </div>
+                        <div class="row justify-content-center mt-3 mb-1 lead" data-swalstrap="radio">
+                            <div class="form-check form-check-inline col-auto">
+                                <input class="form-check-input" type="radio" name="pippo" id="" value="{3:option1}">
+                                <label class="form-check-label" for="">first</label>
+                            </div>
+                        </div>
+                        <textarea class="form-control form-control-lg" rows="3" placeholder=""
+                            data-swalstrap="textarea"></textarea>
+                    </div>
+                </div>
+                <div data-swalstrap="alert"
+                    class="justify-content-center d-flex rounded-0 align-items-center border-0 py-2 px-4 mt-3 mb-1 alert alert-danger">
+                </div>
+                <div data-swalstrap="actions" class="modal-footer justify-content-center border-0 py-0 px-4 mt-3 mb-1">
+                    <button data-swalstrap="btn-accept" type="button" class="btn btn-primary">Ok</button>
+                    <button data-swalstrap="btn-cancel" type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Annulla</button>
+                    <button data-swalstrap="btn-deny" type="button" class="btn btn-danger">No</button>
+                </div>
+                <div class="modal-footer justify-content-center py-0 pt-2 px-0 mt-3 mb-1 d-none">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast align-items-center text-bg-dark border-0 py-1 pe-2" role="alert" aria-live="assertive"
+        aria-atomic="true" id="theToast">
+        <div class="d-flex align-items-center">
+            <div class="toast-icon-container">
+                <div class="swal2-icon swal2-warning swal2-icon-show d-flex">
+                    <div class="swal2-icon-content">!</div>
+                </div>
+            </div>
+            <div class="toast-body">
+                <div class="my-0 h5">Titolo</div>
+                <span class="d-none">Hello, world! This is a toast message.</span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto " data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <script>
+        const modelId = document.getElementById('modelId');
+        const $ = document.querySelector.bind(document);
+        modelId.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute('data-bs-whatever');
+
+            // Use above variables to manipulate the DOM
+        });
+
+        modelId.addEventListener('hidden.bs.modal', event => {
+            console.log(event);
+        })
+
+        $('[data-action="show-toast"]').addEventListener('click', () => {
+            const toastElement = $('#theToast');
+            const options = {
+                autohide: false
+            }
+            const toast = new bootstrap.Toast(toastElement, options);
+            toast.show();
+        })
+    </script>
+
+</body>
+
+</html>

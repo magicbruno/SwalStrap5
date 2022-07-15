@@ -1,0 +1,35 @@
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.loading-spin {
+    &[data-swalstrap="actions"] {
+        min-height: 3rem;
+        position: relative;
+    }
+
+    >button {
+        visibility: hidden;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3.5rem;
+        height: 3.5rem;
+        top: calc(50% - 1.75rem);
+        left: calc(50% - 1.75rem);
+        // transform-origin: -1.3rem -1.3em;
+        // transform: translate(1.3rem, 1.3rem) ;
+        border: 6px solid var(--bs-primary);
+        //border-right-color: transparent;
+        border-radius: 50%;
+        border-left-color: rgba(var(--bs-primary-rgb), .3);
+        //opacity: .6;
+        animation: 1.2s linear infinite spinner-border;
+    }
+}

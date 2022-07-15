@@ -7,11 +7,13 @@ const sourcemaps = require('gulp-sourcemaps');
 const pipeline = require('readable-stream').pipeline;
 const markdown = require('gulp-markdown');
 const footer = require('gulp-footer');
+const fs = require('fs');
 
 const sassSrc = 'sass/*.scss';
 const sassDest = 'docs/assets/css/';
-const jsSrc = 'FM_Viewer.js';
+const jsSrc = 'index.js';
 const jsDest = 'docs/assets/js';
+const cssFile = 'docs/assets/css/swalstrap.min.css';
 const distributionCss = 'dist/css/';
 const distributionJs = 'dist/js/';
 
@@ -34,8 +36,8 @@ function sasscompress() {
     .pipe(autoprefixer())
     .pipe(sourcemaps.init())
     .pipe(gulpsass({ outputStyle: 'compressed' }))
-    .pipe(sourcemaps.write('.'))
     .pipe(rename({ extname: '.min.css' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest(sassDest));
 }
 
@@ -43,28 +45,36 @@ function compressjs() {
   return pipeline(
     src(jsSrc),
     uglify(),
-    rename({extname: '.min.js'}),
+    rename('swalstrap5.min.js'),
     dest(jsDest),
     src(jsSrc),
+    rename('swalstrap5.js'),
     dest(jsDest)
   );
 }
 
 function createAutoInstall() {
+  const cssContent = fs.readFileSync(cssFile);
   return pipeline(
     src(jsSrc),
-    footer(`;(function (win) {
-              win.FM_Viewer = new FMViewer();
-            })(window)`),
+    footer(`;(function (win, doc) {
+                win.Swal = win.swal = win.Sweetalert = win.sweetalert = new Swalstrap();
+                  const style = doc.createElement('style');
+                  style.innerText = \`${cssContent}\`;
+                  doc.head.appendChild(style);
+            })(window, document)`),
     uglify(),
-    rename('FM_Viewe_Autoinstall.min.js'),
+    rename('swalstrap5_all.min.js'),
     dest(jsDest),
     src(jsSrc),
     footer(`
-    ;(function (win) {
-      win.FM_Viewer = new FMViewer();
-    })(window)`),
-    rename('FM_Viewe_Autoinstall.js'),
+    ;(function (win, doc) {
+        win.Swal = win.swal = win.Sweetalert = win.sweetalert = new Swalstrap();
+          const style = doc.createElement('style');
+          style.innerText = \`${cssContent}\`;
+          doc.head.appendChild(style);
+    })(window, document)`),
+    rename('swalstrap5_all.js'),
     dest(jsDest)
   );
 }
@@ -76,7 +86,7 @@ function creadist() {
   )
 }
 
-exports.default = series(sass,sasscompress,compressjs,createAutoInstall,creadist,documentation);
+exports.default = series(sass, sasscompress, compressjs, createAutoInstall, creadist, documentation);
 exports.sass = sass;
 exports.compressjs = compressjs;
 exports.sasscompress = sasscompress;

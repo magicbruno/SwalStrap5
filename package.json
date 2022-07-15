@@ -1,8 +1,8 @@
 {
-  "name": "@magicbruno/fm_viewer",
-  "version": "1.0.1",
+  "name": "@magicbruno/SwalStrap5",
+  "version": "1.0.0",
   "description": "Simple web file viewer",
-  "main": "FM_Viewer.js",
+  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicbruno/FM_Viewer.git"
+    "url": "git+https://github.com/magicbruno/SwalStrap5.git"
   },
   "author": "Bruno Migliaretti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/magicbruno/FM_Viewer/issues"
+    "url": "https://github.com/magicbruno/SwalStrap5/issues"
   },
-  "homepage": "https://github.com/magicbruno/FM_Viewer#readme",
+  "homepage": "https://magicbruno.github.io/SwalStrap5/",
   "dependencies": {
   },
-  "keywords": ["fancybox","lightbox","file-viewer", "fileviewer"],
+  "keywords": ["sweetalert","alert","bootstrap", "dialog"],
   "devDependencies": {
     "bootstrap": "^5.1.3",
     "file-saver": "^2.0.5",

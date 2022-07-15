@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Swalstrap Sandbox</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../docs/assets/css/swalstrap.css"> -->
+
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+    <script src="../dist/js/swalstrap5_all.min.js"></script>
+    <script>
+
+        //const Swal = new Swalstrap();
+        const SwalQuestion = new Swalstrap({
+            icon: 'question',
+            title: 'Million dollar question',
+            customClass: {
+                confirmButton: 'btn btn-success'
+            },
+            confirmButtonText: 'Sì',
+            showDenyButton: true,
+            backdrop: false
+        });
+
+        const openDialog = () => {
+            Swal.fire({
+                title: 'Primo test',
+                html: '<span class="fw-bold text-danger">Attenzione</span> allo spazzacamino',
+                showCancelButton: true,
+                showDenyButton: true,
+                allowOutsideClick: false,
+                //imageUrl:'https://picsum.photos/600/300',
+                input: 'textarea',
+                /*                 inputOptions: {
+                                    '0': 'Pippo',
+                                    '1': 'Pluto',
+                                    '2': 'Paperino'
+                                }, */
+                icon: 'question',
+                inputPlaceholder: 'Inserisci il tuo nome',
+                inputValue: 'Ma guarda chi c\'è!',
+                didOpen: (element) => {
+                    console.log(element.innerHTML);
+                }
+                /*                 preConfirm: function (value) {
+                                                if (!value) {
+                                                    Swal.showValidationMessage('Inserisci un nome!');
+                                                }
+                                            } */
+            }).then(result => {
+                {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Hai inserito',
+                            text: result.value
+                        })
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Processo cancellato dall\'utente'
+                        })
+                    }
+                }
+            });
+        }
+        const testDialog = () => {
+            let timerInterval
+
+            Swal.fire({
+                title: 'Auto close alert!',
+                html: 'I will close in <strong></strong> seconds.<br/><br/>' +
+                    '<button id="increase" class="btn btn-warning">' +
+                    'I need 5 more seconds!' +
+                    '</button><br/><br/>' +
+                    '<button id="stop" class="btn btn-danger">' +
+                    'Please stop the timer!!' +
+                    '</button><br/><br/>' +
+                    '<button id="resume" class="btn btn-success" disabled>' +
+                    'Phew... you can restart now!' +
+                    '</button><br/><br/>' +
+                    '<button id="toggle" class="btn btn-primary">' +
+                    'Toggle' +
+                    '</button>',
+                timer: 10000,
+                position: 'center',
+                timerProgressBar: true,
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    popup: ''
+                },
+                didOpen: () => {
+                    const content = Swal.getHtmlContainer()
+                    const $ = content.querySelector.bind(content)
+
+                    const stop = $('#stop')
+                    const resume = $('#resume')
+                    const toggle = $('#toggle')
+                    const increase = $('#increase')
+
+                    //Swal.showLoading()
+
+                    function toggleButtons() {
+                        stop.disabled = !Swal.isTimerRunning()
+                        resume.disabled = Swal.isTimerRunning()
+                    }
+
+                    stop.addEventListener('click', () => {
+                        Swal.stopTimer()
+                        toggleButtons()
+                    })
+
+                    resume.addEventListener('click', () => {
+                        Swal.resumeTimer()
+                        toggleButtons()
+                    })
+
+                    toggle.addEventListener('click', () => {
+                        Swal.toggleTimer()
+                        toggleButtons()
+                    })
+
+                    increase.addEventListener('click', () => {
+                        Swal.increaseTimer(5000)
+                    })
+
+                    timerInterval = setInterval(() => {
+                        Swal.getHtmlContainer().querySelector('strong')
+                            .textContent = (Swal.getTimerLeft() / 1000)
+                            .toFixed(0)
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                },
+                didClose: () => {
+                    SwalQuestion.fire({
+                        text: "Are you ready?"
+                    }).then(result => {
+                        if (result.isConfirmed) {
+                            SwalQuestion.fire({
+                                text: 'Are you free?'
+                            })
+                        }
+                    })
+                }
+            })
+
+        }
+
+        const openToast = () => {
+            Swal.fire({
+                toast: true,
+                title: 'This is toast!',
+                text: 'And this is a message!',
+                icon: 'warning',
+                position: 'bottom-end',
+                toastStyle: 'auto',
+                timer: 5000
+            })
+        }
+
+        //testDialog();
+        setTimeout(openToast, 3000);
+    </script>
+
+</body>
+
+</html>

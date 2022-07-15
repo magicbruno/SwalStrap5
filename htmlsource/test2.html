@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Test Modal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="mb-4 text-white bg-dark rounded-0">
+       <div class="container py-5">
+           <h1 class="display-3">Header Text</h1>
+           <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.</p>
+           <button class="btn btn-outline-light" type="button" id="test">Example button</button>
+       </div>
+    </div>
+    <div class=""></div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" 
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" 
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    <script>
+
+        const html = `<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content pb-3 px-0">
+                                            <div class="modal-header py-0 border-0 px-3 mt-3 mb-1 align-self-end">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                        <div class="modal-body px-4 py-0">
+                                            <div class="container-fluid d-flex flex-column ">
+                                                <img data-swalstrap="image" src="https://picsum.photos/300/200" class="img-fluid mx-auto mt-3 mb-1">
+                                                <div data-swalstrap="title" class="text-center h2 mt-3 mb-1">Titolo</div>
+                                                <div data-swalstrap="text" class="text-center lead">Lorem ipsum dolor, sit ?</div>
+
+                                            </div>
+                                        </div>
+                                        <div data-swalstrap="alert" class="justify-content-center d-flex rounded-0 align-items-center border-0 py-2 px-4 mt-3 mb-1 alert alert-danger">
+                                            Avvertenza
+                                        </div>
+                                        <div data-swalstrap="actions" class="modal-footer justify-content-center border-0 py-0 px-4 mt-3 mb-1">
+                                            <button data-swalstrap="btn-accept" type="button" class="btn btn-primary">Ok</button>
+                                            <button data-swalstrap="btn-cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                                            <button data-swalstrap="btn-deny" type="button" class="btn btn-danger">No</button>
+                                        </div>
+                                        <div class="modal-footer justify-content-center py-0 pt-2 px-0 mt-3 mb-1 d-none">
+                                            pippo!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+        const btn = document.getElementById("test");
+        var modal = null;
+        var el = null;
+        btn.addEventListener('click', event => {
+            if (modal != null) {
+                modal.dispose();
+                document.body.removeChild(el);
+            }            
+            el = document.createElement("div");
+            el.innerHTML = html;
+            el = el.firstChild;
+            //document.body.appendChild(el);
+
+            modal = new bootstrap.Modal(el);
+            modal.show();
+        });
+    </script>
+  </body>
+</html>

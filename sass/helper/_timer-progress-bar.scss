@@ -1,0 +1,16 @@
+.swal2-timer-progress-bar-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //grid-column: auto !important;
+    overflow: hidden;
+    border-bottom-right-radius: var(--bs-modal-border-radius);
+    border-bottom-left-radius: var(--bs-modal-border-radius);
+  }
+  
+  .swal2-timer-progress-bar {
+    width: 100%;
+    height: $swal2-timer-progress-bar-height;
+    background: var(--bs-secondary);
+  }
