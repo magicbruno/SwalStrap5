@@ -409,19 +409,23 @@
   min-height: 5em;
 }
 
+.toast {
+  z-index: 100000;
+}
+
 @keyframes spinner-border {
   to {
     transform: rotate(360deg);
   }
 }
-.loading-spin[data-swalstrap=actions] {
+.modal-dialog .loading-spin[data-swalstrap=actions] {
   min-height: 3rem;
   position: relative;
 }
-.loading-spin > button {
+.modal-dialog .loading-spin > button {
   visibility: hidden;
 }
-.loading-spin::after {
+.modal-dialog .loading-spin::after {
   content: "";
   display: block;
   position: absolute;

@@ -8,3 +8,7 @@
     justify-content: center;
     min-height: $swal2-icon-size;
 }
+
+.toast {
+    z-index: 100000;
+}
