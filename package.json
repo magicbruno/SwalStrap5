@@ -1,7 +1,7 @@
 {
-  "name": "@magicbruno/SwalStrap5",
-  "version": "1.0.0",
-  "description": "Simple web file viewer",
+  "name": "@magicbruno/swalstrap5",
+  "version": "1.0.1",
+  "description": "Sweetalert2 inspired dialog based on Bootstrap 5",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -23,7 +23,7 @@
   },
   "keywords": ["sweetalert","alert","bootstrap", "dialog"],
   "devDependencies": {
-    "bootstrap": "^5.1.3",
+    "bootstrap": "^5.2.0",
     "file-saver": "^2.0.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -37,6 +37,7 @@
     "gulp-markdown": "^6.0.0"
   },
   "publishConfig": {
-    "@magicbruno:registry": "https://registry.npmjs.org"
+    "@magicbruno:registry": "https://registry.npmjs.org",
+    "access": "public"
   }
 }

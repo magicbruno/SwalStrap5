@@ -83,7 +83,7 @@
         customClass = {};
         toastStyle = '';
 
-        get VERSION () { return '1.0.0' };
+        get VERSION () { return '1.0.1' };
 
         get defaultClasses() {
             return {
@@ -341,7 +341,7 @@
             }
                 
             if (style) {
-                return `text-bg-${style} border-0`;
+                return `bg-${style} text-white; border-0`;
             }
             return '';
         }
