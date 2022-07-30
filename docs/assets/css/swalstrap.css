@@ -361,7 +361,7 @@
 .toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
   right: 0.3125em;
 }
-.toast.text-bg-primary .swal2-icon, .toast.text-bg-secondary .swal2-icon, .toast.text-bg-success .swal2-icon, .toast.text-bg-info .swal2-icon, .toast.text-bg-danger .swal2-icon, .toast.text-bg-warning .swal2-icon, .toast.text-bg-dark .swal2-icon {
+.toast.bg-primary .swal2-icon, .toast.bg-secondary .swal2-icon, .toast.bg-success .swal2-icon, .toast.bg-info .swal2-icon, .toast.bg-danger .swal2-icon, .toast.bg-warning .swal2-icon, .toast.bg-dark .swal2-icon {
   color: var(--bs-white);
   border-color: var(--bs-white);
 }
@@ -418,14 +418,14 @@
     transform: rotate(360deg);
   }
 }
-.modal-dialog .loading-spin[data-swalstrap=actions] {
+.modal-swal .loading-spin[data-swalstrap=actions] {
   min-height: 3rem;
   position: relative;
 }
-.modal-dialog .loading-spin > button {
+.modal-swal .loading-spin > button {
   visibility: hidden;
 }
-.modal-dialog .loading-spin::after {
+.modal-swal .loading-spin::after {
   content: "";
   display: block;
   position: absolute;

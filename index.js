@@ -83,7 +83,7 @@
         customClass = {};
         toastStyle = '';
 
-        get VERSION () { return '1.0.1' };
+        get VERSION () { return '1.0.3' };
 
         get defaultClasses() {
             return {
@@ -170,7 +170,7 @@
             this.currentId = this.createId();
             return `<div class="modal fade ${this.customClass.container}" id="modal_${this.currentId}" tabindex="-1" role="dialog" aria-labelledby="${this.config.title}" 
                         aria-hidden="true">
-                        <div class="modal-dialog ${this.customClass.popup} ${this.config.position == 'top' || this.config.position == 'top-center' ? '' : 'modal-dialog-centered'}" role="document">
+                        <div class="modal-dialog modal-swal ${this.customClass.popup} ${this.config.position == 'top' || this.config.position == 'top-center' ? '' : 'modal-dialog-centered'}" role="document">
                             <div class="modal-content pb-3 px-0">
                                 <div class="modal-header ${this.customClass.header} ${this.display('btn-close')}">
                                     <button data-swalstrap="btn-close" type="button" class="${this.customClass.closeButton}" 
@@ -341,7 +341,7 @@
             }
                 
             if (style) {
-                return `bg-${style} text-white; border-0`;
+                return `bg-${style} text-white border-0`;
             }
             return '';
         }

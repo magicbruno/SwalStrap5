@@ -303,13 +303,13 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
     }
   }
 
-  &.text-bg-primary,
-  &.text-bg-secondary,
-  &.text-bg-success,
-  &.text-bg-info,
-  &.text-bg-danger,
-  &.text-bg-warning,
-  &.text-bg-dark {
+  &.bg-primary,
+  &.bg-secondary,
+  &.bg-success,
+  &.bg-info,
+  &.bg-danger,
+  &.bg-warning,
+  &.bg-dark {
     .swal2-icon {
       color: var(--bs-white);
       border-color: var(--bs-white);
