@@ -1,0 +1,142 @@
+@keyframes animate-flip-y {
+    0% {
+        transform: rotateY(-600deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+
+@keyframes animate-bounce {
+    0% {
+        transform: rotateZ(45deg);
+        opacity: 0;
+    }
+
+    20% {
+        transform: rotateZ(-40deg);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: rotateZ(20deg);
+        opacity: 0.8;
+    }
+
+    60% {
+        transform: rotateZ(-15deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: rotateZ(5deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@keyframes zoom-rotate {
+    0% {
+        transform: scale(0.1) rotateZ(-500deg) translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) rotateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-down {
+    0% {
+        transform: scale(0.1) translateY(-80%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animate-bounce-zoom {
+    0% {
+        transform: scale(0.7);
+    }
+
+    45% {
+        transform: scale(1.05);
+    }
+
+    80% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animate-bounce-zoom2 {
+    0% {
+        transform: scale(0.5);
+    }
+
+    20% {
+        transform: scale(1.05);
+    }
+
+    40% {
+        transform: scale(0.80);
+    }
+
+    60% {
+        transform: scale(1.20);
+    }
+
+    80% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.show-border {
+    animation: animate-bounce-zoom .4s ease-in;
+    animation-delay: 0;
+}
+
+.flip {
+    animation: animate-flip-y .8s ease-in-out;
+}
+
+.rotate {
+    animation: zoom-rotate .7s ease-in-out;
+}
+
+.zoom-down {
+    animation: zoom-down .4s ease-in-out;
+}
+
+.bounce {
+    animation: animate-bounce .8s ease-in-out;
+}
+
+.zoom-bounce {
+    animation: animate-bounce-zoom2 1.4s ease-in-out;
+}

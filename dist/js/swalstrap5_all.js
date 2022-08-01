@@ -21,28 +21,35 @@
     const JAVASCRIPT_ERROR = -1;
 
     // icons
-    const ICON_SUCCESS = `<div class="swal2-icon swal2-success swal2-icon-show d-flex" hidden>
-                                <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
-                                <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
-                                <div class="swal2-success-ring"></div> 
-                                <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
-                                <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
-                           </div>`;
-    const ICON_ERROR = `<div class="swal2-icon swal2-error swal2-icon-show d-flex" hidden>
-                                <span class="swal2-x-mark">
-                                    <span class="swal2-x-mark-line-left"></span>
-                                    <span class="swal2-x-mark-line-right"></span>
-                                </span>
-                           </div>`;
-    const ICON_WARNING = `<div class="swal2-icon swal2-warning swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">!</div>
-                           </div>`;
-    const ICON_INFO = `<div class="swal2-icon swal2-info swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">i</div>
-                           </div>`;
-    const ICON_QUESTION = `<div class="swal2-icon swal2-question swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">?</div>
-                           </div>`;
+    const ICON_SUCCESS = `  <div class="icon icon-success show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flip" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                            </div>`;
+    const ICON_ERROR = `<div class="icon icon-error show-border" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="rotate" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>`;
+    const ICON_WARNING = `  <div class="icon icon-warning show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="zoom-bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0L7.1 4.995z" />
+                                </svg>
+                            </div>`;
+    const ICON_INFO = `<div class="icon icon-info show-border" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="zoom-down" viewBox="0 0 16 16">
+                                <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>
+                        </div>`;
+    const ICON_QUESTION = ` <div class="icon icon-question show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                </svg>
+                            </div>`;
     const ICON_SUCCESS_ALT =   `<svg xmlns="http://www.w3.org/2000/svg" width="2.2rem" height="2.2rem" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
@@ -83,7 +90,7 @@
         customClass = {};
         toastStyle = '';
 
-        get VERSION () { return '1.0.3' };
+        get VERSION () { return '1.0.5' };
 
         get defaultClasses() {
             return {
@@ -236,7 +243,7 @@
         };
 
         get toastContent() {
-            return `<div class="toast position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
+            return `<div class="toast toast-swal position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
                         aria-live="assertive" aria-atomic="true" id="toast_${this.currentId}">
                         <div class="d-flex align-items-center">
                             <div class="toast-icon-container ${this.display('icon')} ${!this.toastBackground && this.config.icon == 'success' ? 'text-success' : ''}" data-swalstrap="icon">
@@ -266,7 +273,7 @@
                 case 'error':
                     return ICON_ERROR;
                 case 'success':
-                    return this.config.toast ? ICON_SUCCESS_ALT : ICON_SUCCESS;
+                    return ICON_SUCCESS;
                 case 'info':
                     return ICON_INFO;
                 case 'question':
@@ -597,7 +604,7 @@
             if (this.config.icon) {
                 this.modalElement.addEventListener('show.bs.toast', event => {
                     // Icon animation start
-                    let icon = self.modalElement.querySelector('.swal2-icon');
+                    let icon = self.modalElement.querySelector('.icon');
                     if (icon)
                         icon.removeAttribute('hidden');
 
@@ -606,7 +613,7 @@
 
             this.modal.show();
             return new Promise((resolve, reject) => {
-                self.modalElement.addEventListener('hidden.bs.modal', event => {
+                self.modalElement.addEventListener('hidden.bs.toast', event => {
                     try {
                         resolve(self.modalResult);
                     } catch (error) {
@@ -638,7 +645,7 @@
             if (this.config.icon) {
                 this.modalElement.addEventListener('show.bs.modal', event => {
                     // Icon animation start
-                    self.modalElement.querySelector('.swal2-icon').removeAttribute('hidden');
+                    self.modalElement.querySelector('.icon').removeAttribute('hidden');
                 }, { once: true });
             }
 
@@ -1183,7 +1190,7 @@
     ;(function (win, doc) {
         win.Swal = win.swal = win.Sweetalert = win.sweetalert = new Swalstrap();
           const style = doc.createElement('style');
-          style.innerText = `@keyframes swal2-show{0%{transform:scale(0.7)}45%{transform:scale(1.05)}80%{transform:scale(0.95)}100%{transform:scale(1)}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(0.5);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;border:0.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:rgba(var(--bs-danger-rgb), 0.3);color:var(--bs-danger)}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:rgba(var(--bs-warning-rgb), 0.3);color:var(--bs-warning)}.swal2-icon.swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s;animation-delay:.2s}.swal2-icon.swal2-info{border-color:rgba(var(--bs-info-rgb), 0.3);color:var(--bs-info)}.swal2-icon.swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s;animation-delay:.2s}.swal2-icon.swal2-question{border-color:rgba(var(--bs-secondary-rgb), 0.3);color:var(--bs-secondary)}.swal2-icon.swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s;animation-delay:.2s}.swal2-icon.swal2-success{border-color:rgba(var(--bs-success-rgb), 0.4);color:var(--bs-success)}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s;animation-delay:.2s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s;animation-delay:.2s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in;animation-delay:.2s}.toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.toast .swal2-icon.swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.toast .swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.toast .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.toast.bg-primary .swal2-icon,.toast.bg-secondary .swal2-icon,.toast.bg-success .swal2-icon,.toast.bg-info .swal2-icon,.toast.bg-danger .swal2-icon,.toast.bg-warning .swal2-icon,.toast.bg-dark .swal2-icon{color:var(--bs-white);border-color:var(--bs-white)}.toast .toast-icon-container{padding-left:var(--bs-toast-padding-x)}.toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.toast .swal2-icon.swal2-success .swal2-success-ring{border-color:var(--bs-white)}.toast .swal2-icon.swal2-success .swal2-success-fix{background-color:var(--bs-success)}.toast .swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{background-color:var(--bs-white)}.toast .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{background-color:var(--bs-white)}.toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{background-color:var(--bs-white)}[hidden].d-flex{display:none !important}.swal-bs-icon-container{display:flex;justify-content:center;min-height:5em}.toast{z-index:100000}@keyframes spinner-border{to{transform:rotate(360deg)}}.modal-swal .loading-spin[data-swalstrap=actions]{min-height:3rem;position:relative}.modal-swal .loading-spin>button{visibility:hidden}.modal-swal .loading-spin::after{content:"";display:block;position:absolute;width:3.5rem;height:3.5rem;top:calc(50% - 1.75rem);left:calc(50% - 1.75rem);border:6px solid var(--bs-primary);border-radius:50%;border-left-color:rgba(var(--bs-primary-rgb), 0.3);animation:1.2s linear infinite spinner-border}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;overflow:hidden;border-bottom-right-radius:var(--bs-modal-border-radius);border-bottom-left-radius:var(--bs-modal-border-radius)}.swal2-timer-progress-bar{width:100%;height:.25em;background:var(--bs-secondary)}
+          style.innerText = `@keyframes animate-flip-y{0%{transform:rotateY(-600deg);opacity:0}50%{opacity:1}100%{transform:rotateY(0)}}@keyframes animate-bounce{0%{transform:rotateZ(45deg);opacity:0}20%{transform:rotateZ(-40deg);opacity:.4}40%{transform:rotateZ(20deg);opacity:.8}60%{transform:rotateZ(-15deg);opacity:1}80%{transform:rotateZ(5deg)}100%{transform:rotateX(0)}}@keyframes zoom-rotate{0%{transform:scale(0.1) rotateZ(-500deg) translateY(-100%);opacity:0}100%{transform:scale(1) rotateZ(0) translateY(0);opacity:1}}@keyframes zoom-down{0%{transform:scale(0.1) translateY(-80%);opacity:0}50%{opacity:.3}100%{transform:scale(1) translateY(0);opacity:1}}@keyframes animate-bounce-zoom{0%{transform:scale(0.7)}45%{transform:scale(1.05)}80%{transform:scale(0.95)}100%{transform:scale(1)}}@keyframes animate-bounce-zoom2{0%{transform:scale(0.5)}20%{transform:scale(1.05)}40%{transform:scale(0.8)}60%{transform:scale(1.2)}80%{transform:scale(0.95)}100%{transform:scale(1)}}.show-border{animation:animate-bounce-zoom .4s ease-in;animation-delay:0}.flip{animation:animate-flip-y .8s ease-in-out}.rotate{animation:zoom-rotate .7s ease-in-out}.zoom-down{animation:zoom-down .4s ease-in-out}.bounce{animation:animate-bounce .8s ease-in-out}.zoom-bounce{animation:animate-bounce-zoom2 1.4s ease-in-out}.icon{border-style:solid;border-width:4px;border-radius:50%}.icon.icon-success{border-color:rgba(var(--bs-success-rgb), 0.4);color:var(--bs-success)}.icon.icon-error{border-color:rgba(var(--bs-danger-rgb), 0.4);color:var(--bs-danger)}.icon.icon-warning{border-color:rgba(var(--bs-warning-rgb), 0.4);color:var(--bs-warning)}.icon.icon-info{border-color:rgba(var(--bs-info-rgb), 0.4);color:var(--bs-info)}.icon.icon-question{border-color:rgba(var(--bs-secondary-rgb), 0.4);color:var(--bs-secondary)}.modal-swal .icon svg{width:5em;height:5em}.toast svg,.toast-swal svg{width:2.3em;height:2.3em}.toast.bg-primary .icon,.toast.bg-secondary .icon,.toast.bg-success .icon,.toast.bg-info .icon,.toast.bg-danger .icon,.toast.bg-warning .icon,.toast.bg-dark .icon,.toast-swal.bg-primary .icon,.toast-swal.bg-secondary .icon,.toast-swal.bg-success .icon,.toast-swal.bg-info .icon,.toast-swal.bg-danger .icon,.toast-swal.bg-warning .icon,.toast-swal.bg-dark .icon{color:var(--bs-white, #fff);border-color:var(--bs-white, #fff)}.toast-icon-container{padding-left:var(--bs-toast-padding-x, 0.75rem)}[hidden].d-flex{display:none !important}.swal-bs-icon-container{display:flex;justify-content:center;min-height:5em;margin-top:1.75rem}.toast{z-index:100000}.toast.toast-swal.fade{transition:all .7s !important}@keyframes spinner-border{to{transform:rotate(360deg)}}.modal-swal .loading-spin[data-swalstrap=actions]{min-height:3rem;position:relative}.modal-swal .loading-spin>button{visibility:hidden}.modal-swal .loading-spin::after{content:"";display:block;position:absolute;width:3.5rem;height:3.5rem;top:calc(50% - 1.75rem);left:calc(50% - 1.75rem);border:3px solid var(--bs-primary);border-radius:50%;border-left-color:rgba(var(--bs-primary-rgb), 0.3);animation:1.2s linear infinite spinner-border}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;overflow:hidden;border-bottom-right-radius:var(--bs-modal-border-radius);border-bottom-left-radius:var(--bs-modal-border-radius)}.swal2-timer-progress-bar{width:100%;height:.25em;background:var(--bs-secondary)}
 /*# sourceMappingURL=swalstrap.min.css.map */
 `;
           doc.head.appendChild(style);

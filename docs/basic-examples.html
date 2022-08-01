@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css'
+        integrity='sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q=='
+        crossorigin='anonymous' />
+    <style>
+        body,
+        html {
+            min-height: 100vh;
+        }
+
+        .navbar-brand {
+            height: 46px;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top fm-light">
+        <div class="container justify-content-between">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                <svg id="Livello_1" class="me-2 h-100" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 435.93 485.88">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffa300;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M326.24,485.88H62.16c16.51-31,33.09-62.05,49.5-93.15,3.18-6,5.9-12.32,8.52-18.63,2-4.72.79-5.5-4-6.37-5.43-1-11.21-2.22-15.83-5C90.11,356.57,83,347.24,77.77,336.58a18.48,18.48,0,0,1-2.22-7.1c-.58-16.64.2-33.4,8.3-48.2,4.3-7.86,4-13.15-1.06-20-4.74-6.46-8.26-14-6-22.48a41.74,41.74,0,0,0-2.29-28.36c-5.69-12.77-12.22-25.15-18.24-37.77-5.76-12.08-14.35-19.23-28.6-18.22-5.5.39-9.85-2.21-12.23-7.78a7.42,7.42,0,0,0-4.75-3.48c-9.59-2-13.62-9-8.37-17.22A87.73,87.73,0,0,1,18.7,106.73c17.4-15,37.89-25,59.35-32.48C123.84,58.29,169.67,42.37,216,28,258,15,301,5.12,344.9.6a111.08,111.08,0,0,1,29.76.89c10.58,1.82,14.62,11,10.79,21-1.37,3.57-1.34,6.35,1.86,8.82,3.8,2.94,3.26,6.24.36,9.45-3.24,3.58-6.31,7.39-9.94,10.54-8.56,7.41-11.13,16.68-9.36,27.47A117.26,117.26,0,0,0,370.93,91c4.46,16.06,8.94,32.11,13.68,48.09a139.08,139.08,0,0,0,6.82,18.72c2,4.43,2.34,8.2-.56,12.13-3.31,4.47-3.41,9.23-2.54,14.67,1,5.93,1.62,12.42.14,18.08-2,7.57-2.11,14,3,20.14,2.24,2.67,4.24,5.58,6.67,8.07,10.62,10.83,21.23,21.67,32.09,32.24,6,5.85,6.22,13.05,5.24,20.34-.31,2.27-2.94,4.87-5.18,6.11a112.25,112.25,0,0,1-15.06,6.6c-7.88,2.94-10.9,7.46-10.22,15.81.39,4.65,1,12.35.68,17-.3,3.83-5.07,4.51-5.88,8.32-.48,2.26,2.87.92,3.6,2.92,2.18,6,1.45,15.23-3.38,20.14a21.11,21.11,0,0,0-3.95,6.33A11,11,0,0,0,397,378c7.41,10.92,3.15,26.36-7,32.18a228.42,228.42,0,0,1-41.87,18.59c-11.09,3.67-23.19,4.34-34.87,6.09-4.12.62-6.64,2.33-6.42,6.65.29,6,1,11.89,1.29,17.84.45,9.17,3.56,16.74,11.81,21.66A63.45,63.45,0,0,1,326.24,485.88Z" />
+                </svg>
+                <span class="h2 mt-n2 fw-light">sistem<span class="fw-bold">interattivi</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            </div>
+            <script>
+                (function (doc) {
+                    const targetElement = doc.querySelector('#navbarCollapse');
+                    fetch('menu.xml')
+                        .then(response => response.text())
+                        .then(result => targetElement.innerHTML = result)
+                        .catch(error => console.error(error));
+                })(document);
+            </script>
+        </div>
+    </nav>
+    <div class="d-flex flex-column justify-content-between align-items-stretch min-vh-100" style="padding-top: 62px">
+        <div class="text-bg-secondary py-5 flex-grow-0">
+            <div class="container">
+                <h1 class="display-3 mb-4">Basic examples</h1>
+                <!--                 <div class="row icon-demo">
+                    <div class="col-auto">
+                        <a class="btn btn-success border" href="#" role="button">Success</a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-danger border" href="#" role="button">Error</a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-warning border" href="#" role="button">Warning</a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-info border" href="#" role="button">Info</a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-secondary border" href="#" role="button">Question</a>
+                    </div>
+
+                </div> -->
+
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
+            <div class="container pt-5">
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">Basic message</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire('Any fool can use a computer');</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="0">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">Title, text under and icon</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire(
+    'The Internet?',
+    'That thing is still around?',
+    'question'
+);</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="1">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">A modal with a title, an error icon, a text, and a footer</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href="">Why do I have this issue?</a>'
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="2">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">Custom HTML description</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    title: '<strong>HTML <u>example</u></strong>',
+    icon: 'info',
+    html:
+        'You can use <b>bold text</b>, ' +
+        '<a href="//sweetalert2.github.io">links</a> ' +
+        'and other HTML tags',
+    showCloseButton: true,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Great!',
+    confirmButtonAriaLabel: 'Thumbs up, great!',
+    cancelButtonText:
+        '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;currentColor&quot; class=&quot;bi bi-hand-thumbs-down&quot; viewBox=&quot;0 0 16 16&quot;&gt;&#13;&#10;        &lt;path d=&quot;M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z&quot;/&gt;&#13;&#10;        &lt;/svg&gt;',
+    cancelButtonAriaLabel: 'Thumbs down'
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="3">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">A dialog with three buttons</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    title: 'Do you want to save the changes?',
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Save',
+    denyButtonText: `Don't save`,
+}).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+    } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+    }
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="4">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">A confirm dialog, with a function attached to the "Confirm" button</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+        )
+    }
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="5">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">A message with a custom image</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    title: 'Sweet!',
+    text: 'Modal with a custom image.',
+    imageUrl: 'https://unsplash.it/400/200',
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="6">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">A message with auto close timer</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">let timerInterval;
+Swal.fire({
+    title: 'Auto close alert!',
+    html: 'I will close in <b></b> milliseconds.',
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+        b.textContent = Swal.getTimerLeft()
+        }, 100)
+    },
+    willClose: () => {
+        clearInterval(timerInterval)
+    }
+    }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+    }
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="7">Try me!</button>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <p class="lead mb-3">AJAX request example</p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">Swal.fire({
+    title: 'Submit your Github username',
+    input: 'text',
+    inputAttributes: {
+        autocapitalize: 'off'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Look up',
+    showLoaderOnConfirm: true,
+    preConfirm: (login) => {
+        return fetch(`//api.github.com/users/${login}`)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error(response.statusText)
+            }
+            return response.json()
+        })
+        .catch(error => {
+            Swal.showValidationMessage(
+            `Request failed: ${error}`
+            )
+        })
+    },
+    allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire({
+        title: `${result.value.login}'s avatar`,
+        imageUrl: result.value.avatar_url
+        })
+    }
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="8">Try me!</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js'
+        integrity='sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ=='
+        crossorigin='anonymous'></script>
+    <script src="assets/js/swalstrap5_all.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        const hiddenElements = document.querySelectorAll('[hidden]');
+        hiddenElements.forEach(el => {
+            setTimeout(() => el.removeAttribute('hidden'), 500);
+        })
+    </script>
+    <script>
+            (function (win, doc) {
+                class Examples {
+                    constructor(buttons) {
+                        this.do = [];
+                        this.doAll();
+                        buttons.forEach(element => {
+                            element.addEventListener('click', event => {
+                                const target = event.target;
+                                const example = parseInt(target.dataset.example);
+                                if (!isNaN(example) && typeof this.do[example] === 'function') { }
+                                this.do[example]();
+                            })
+                        })
+                    }
+                    do = null;
+
+                    doAll() {
+                        this.do[0] = () => Swal.fire('Any fool can use a computer');
+                        this.do[1] = () => Swal.fire(
+                            'The Internet?',
+                            'That thing is still around?',
+                            'question'
+                        );
+                        this.do[2] = () => Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                            footer: '<a href="">Why do I have this issue?</a>'
+                        });
+                        this.do[3] = () => Swal.fire({
+                            title: '<strong>HTML <u>example</u></strong>',
+                            icon: 'info',
+                            html:
+                                'You can use <b>bold text</b>, ' +
+                                '<a href="//sweetalert2.github.io">links</a> ' +
+                                'and other HTML tags',
+                            showCloseButton: true,
+                            showCancelButton: true,
+                            focusConfirm: false,
+                            confirmButtonText:
+                                '<i class="fa fa-thumbs-up"></i> Great!',
+                            confirmButtonAriaLabel: 'Thumbs up, great!',
+                            cancelButtonText:
+                                `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-down" viewBox="0 0 16 16">
+  <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z"/>
+</svg>`,
+                            cancelButtonAriaLabel: 'Thumbs down'
+                        });
+                        this.do[4] = () => Swal.fire({
+                            title: 'Do you want to save the changes?',
+                            showDenyButton: true,
+                            showCancelButton: true,
+                            confirmButtonText: 'Save',
+                            denyButtonText: `Don't save`,
+                        }).then((result) => {
+                            /* Read more about isConfirmed, isDenied below */
+                            if (result.isConfirmed) {
+                                Swal.fire('Saved!', '', 'success')
+                            } else if (result.isDenied) {
+                                Swal.fire('Changes are not saved', '', 'info')
+                            }
+                        });
+                        this.do[5] = () => Swal.fire({
+                            title: 'Are you sure?',
+                            text: "You won't be able to revert this!",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, delete it!'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                )
+                            }
+                        });
+                        this.do[6] = () => Swal.fire({
+                            title: 'Sweet!',
+                            text: 'Modal with a custom image.',
+                            imageUrl: 'https://unsplash.it/400/200',
+                            imageWidth: 400,
+                            imageHeight: 200,
+                            imageAlt: 'Custom image',
+                        });
+                        this.do[7] = () => {
+                            let timerInterval;
+                            Swal.fire({
+                                title: 'Auto close alert!',
+                                html: 'I will close in <b></b> milliseconds.',
+                                timer: 3000,
+                                timerProgressBar: true,
+                                didOpen: () => {
+                                    Swal.showLoading()
+                                    const b = Swal.getHtmlContainer().querySelector('b')
+                                    timerInterval = setInterval(() => {
+                                        b.textContent = Swal.getTimerLeft()
+                                    }, 100)
+                                },
+                                willClose: () => {
+                                    clearInterval(timerInterval)
+                                }
+                            }).then((result) => {
+                                /* Read more about handling dismissals below */
+                                if (result.dismiss === Swal.DismissReason.timer) {
+                                    console.log('I was closed by the timer')
+                                }
+                            });
+                        };
+                        this.do[8] = () => Swal.fire({
+                            title: 'Submit your Github username',
+                            input: 'text',
+                            inputAttributes: {
+                                autocapitalize: 'off'
+                            },
+                            showCancelButton: true,
+                            confirmButtonText: 'Look up',
+                            showLoaderOnConfirm: true,
+                            preConfirm: (login) => {
+                                return fetch(`//api.github.com/users/${login}`)
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error(response.statusText)
+                                        }
+                                        return response.json()
+                                    })
+                                    .catch(error => {
+                                        Swal.showValidationMessage(
+                                            `Request failed: ${error}`
+                                        )
+                                    })
+                            },
+                            allowOutsideClick: () => !Swal.isLoading()
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire({
+                                    title: `${result.value.login}'s avatar`,
+                                    imageUrl: result.value.avatar_url
+                                })
+                            }
+                        });
+                    }
+                }
+                const buttons = doc.querySelectorAll('[data-example]');
+                win.examples = new Examples(buttons);
+            })(window, document);
+    </script>
+</body>
+
+</html>

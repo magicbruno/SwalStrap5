@@ -311,13 +311,13 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
   &.bg-warning,
   &.bg-dark {
     .swal2-icon {
-      color: var(--bs-white);
-      border-color: var(--bs-white);
+      color: var(--bs-white, #fff);
+      border-color: var(--bs-white, #fff);
     }
   }
 
   .toast-icon-container {
-    padding-left: var(--bs-toast-padding-x);
+    padding-left: var(--bs-toast-padding-x, 0.75rem);
   }
 
   .swal2-icon {
@@ -338,7 +338,7 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
 
     &.swal2-success {
       .swal2-success-ring {
-        border-color: var(--bs-white);
+        border-color: var(--bs-white,#fff);
       }
 
       .swal2-success-fix {
@@ -346,17 +346,17 @@ $icon-zoom: math.div(strip-units($swal2-icon-size), 5);
       }
 
       [class^=swal2-success-line][class$=long] {
-        background-color: var(--bs-white);
+        background-color: var(--bs-white,#fff);
       }
 
       [class^=swal2-success-line][class$=tip] {
-        background-color: var(--bs-white);
+        background-color: var(--bs-white,#fff);
       }
     }
 
     &.swal2-error {
       [class^='swal2-x-mark-line'] {
-        background-color: var(--bs-white);
+        background-color: var(--bs-white,#fff);
       }
     }
   }

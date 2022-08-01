@@ -7,8 +7,12 @@
     display: flex;
     justify-content: center;
     min-height: $swal2-icon-size;
+    margin-top:  1.75rem;
 }
 
 .toast {
     z-index: 100000;
+    &.toast-swal.fade {
+        transition: all .7s !important;
+    }
 }

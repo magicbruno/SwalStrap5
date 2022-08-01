@@ -10,11 +10,9 @@
             min-height: 3rem;
             position: relative;
         }
-
         >button {
             visibility: hidden;
         }
-
         &::after {
             content: "";
             display: block;
@@ -25,7 +23,7 @@
             left: calc(50% - 1.75rem);
             // transform-origin: -1.3rem -1.3em;
             // transform: translate(1.3rem, 1.3rem) ;
-            border: 6px solid var(--bs-primary);
+            border: 3px solid var(--bs-primary);
             //border-right-color: transparent;
             border-radius: 50%;
             border-left-color: rgba(var(--bs-primary-rgb), .3);

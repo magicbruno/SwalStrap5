@@ -1,0 +1,64 @@
+.icon {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+
+    &.icon-success {
+        border-color: rgba(var(--bs-success-rgb), .4);
+        color: var(--bs-success);
+    }
+
+    &.icon-error {
+        border-color: rgba(var(--bs-danger-rgb), .4);
+        color: var(--bs-danger);
+    }
+
+    &.icon-warning {
+        border-color: rgba(var(--bs-warning-rgb), .4);
+        color: var(--bs-warning);
+    }
+
+    &.icon-info {
+        border-color: rgba(var(--bs-info-rgb), .4);
+        color: var(--bs-info);
+    }
+
+    &.icon-question {
+        border-color: rgba(var(--bs-secondary-rgb), .4);
+        color: var(--bs-secondary);
+    }
+}
+
+.modal-swal {
+    .icon {
+        svg {
+            width: 5em;
+            height: 5em;
+        }
+    }
+}
+
+.toast,
+.toast-swal {
+    svg {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    &.bg-primary,
+    &.bg-secondary,
+    &.bg-success,
+    &.bg-info,
+    &.bg-danger,
+    &.bg-warning,
+    &.bg-dark {
+        .icon {
+            color: var(--bs-white, #fff);
+            border-color: var(--bs-white, #fff);
+        }
+    }
+}
+
+.toast-icon-container {
+    padding-left: var(--bs-toast-padding-x, 0.75rem);
+}

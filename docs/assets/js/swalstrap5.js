@@ -21,28 +21,35 @@
     const JAVASCRIPT_ERROR = -1;
 
     // icons
-    const ICON_SUCCESS = `<div class="swal2-icon swal2-success swal2-icon-show d-flex" hidden>
-                                <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
-                                <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
-                                <div class="swal2-success-ring"></div> 
-                                <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
-                                <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
-                           </div>`;
-    const ICON_ERROR = `<div class="swal2-icon swal2-error swal2-icon-show d-flex" hidden>
-                                <span class="swal2-x-mark">
-                                    <span class="swal2-x-mark-line-left"></span>
-                                    <span class="swal2-x-mark-line-right"></span>
-                                </span>
-                           </div>`;
-    const ICON_WARNING = `<div class="swal2-icon swal2-warning swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">!</div>
-                           </div>`;
-    const ICON_INFO = `<div class="swal2-icon swal2-info swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">i</div>
-                           </div>`;
-    const ICON_QUESTION = `<div class="swal2-icon swal2-question swal2-icon-show d-flex" hidden>
-                                <div class="swal2-icon-content">?</div>
-                           </div>`;
+    const ICON_SUCCESS = `  <div class="icon icon-success show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flip" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                            </div>`;
+    const ICON_ERROR = `<div class="icon icon-error show-border" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="rotate" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>`;
+    const ICON_WARNING = `  <div class="icon icon-warning show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="zoom-bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0L7.1 4.995z" />
+                                </svg>
+                            </div>`;
+    const ICON_INFO = `<div class="icon icon-info show-border" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="zoom-down" viewBox="0 0 16 16">
+                                <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg>
+                        </div>`;
+    const ICON_QUESTION = ` <div class="icon icon-question show-border" hidden>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                </svg>
+                            </div>`;
     const ICON_SUCCESS_ALT =   `<svg xmlns="http://www.w3.org/2000/svg" width="2.2rem" height="2.2rem" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
@@ -83,7 +90,7 @@
         customClass = {};
         toastStyle = '';
 
-        get VERSION () { return '1.0.3' };
+        get VERSION () { return '1.0.5' };
 
         get defaultClasses() {
             return {
@@ -236,7 +243,7 @@
         };
 
         get toastContent() {
-            return `<div class="toast position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
+            return `<div class="toast toast-swal position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
                         aria-live="assertive" aria-atomic="true" id="toast_${this.currentId}">
                         <div class="d-flex align-items-center">
                             <div class="toast-icon-container ${this.display('icon')} ${!this.toastBackground && this.config.icon == 'success' ? 'text-success' : ''}" data-swalstrap="icon">
@@ -266,7 +273,7 @@
                 case 'error':
                     return ICON_ERROR;
                 case 'success':
-                    return this.config.toast ? ICON_SUCCESS_ALT : ICON_SUCCESS;
+                    return ICON_SUCCESS;
                 case 'info':
                     return ICON_INFO;
                 case 'question':
@@ -597,7 +604,7 @@
             if (this.config.icon) {
                 this.modalElement.addEventListener('show.bs.toast', event => {
                     // Icon animation start
-                    let icon = self.modalElement.querySelector('.swal2-icon');
+                    let icon = self.modalElement.querySelector('.icon');
                     if (icon)
                         icon.removeAttribute('hidden');
 
@@ -606,7 +613,7 @@
 
             this.modal.show();
             return new Promise((resolve, reject) => {
-                self.modalElement.addEventListener('hidden.bs.modal', event => {
+                self.modalElement.addEventListener('hidden.bs.toast', event => {
                     try {
                         resolve(self.modalResult);
                     } catch (error) {
@@ -638,7 +645,7 @@
             if (this.config.icon) {
                 this.modalElement.addEventListener('show.bs.modal', event => {
                     // Icon animation start
-                    self.modalElement.querySelector('.swal2-icon').removeAttribute('hidden');
+                    self.modalElement.querySelector('.icon').removeAttribute('hidden');
                 }, { once: true });
             }
 

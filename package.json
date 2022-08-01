@@ -1,6 +1,6 @@
 {
   "name": "@magicbruno/swalstrap5",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Sweetalert2 inspired dialog based on Bootstrap 5",
   "main": "index.js",
   "directories": {
