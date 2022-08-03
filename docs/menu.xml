@@ -2,12 +2,14 @@
     <li class="nav-item">
         <a class="nav-link" aria-current="page" href="index.html">Home</a>
     </li>
-    
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="api.html">Documentation</a>
+    </li>    
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Examples</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="basic-examples.html">Basic</a></li>
-            <li><a class="dropdown-item" href="demo-custom.html">Customize</a></li>
+            <li><a class="dropdown-item" href="customization.html">Customize</a></li>
         </ul>
     </li>
     <li class="nav-item">

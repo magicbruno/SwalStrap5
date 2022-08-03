@@ -56,12 +56,12 @@
                 inputValue: 'Ma guarda chi c\'è!',
                 didOpen: (element) => {
                     console.log(element.innerHTML);
-                }
-                /*                 preConfirm: function (value) {
-                                                if (!value) {
-                                                    Swal.showValidationMessage('Inserisci un nome!');
-                                                }
-                                            } */
+                },
+                preConfirm: function (value) {
+                                if (!value) {
+                                    Swal.showValidationMessage('Inserisci un nome!');
+                                }
+                            } 
             }).then(result => {
                 {
                     if (result.isConfirmed) {

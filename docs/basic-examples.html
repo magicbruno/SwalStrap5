@@ -20,6 +20,12 @@
         .navbar-brand {
             height: 46px;
         }
+        div.row::before {
+            content:"";
+            display: block;
+            height: 62px;
+            width: 100%;
+        }
     </style>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css">
@@ -62,8 +68,8 @@
         </div>
     </nav>
     <div class="d-flex flex-column justify-content-between align-items-stretch min-vh-100" style="padding-top: 62px">
-        <div class="text-bg-secondary py-5 flex-grow-0">
-            <div class="container">
+        <div class="text-bg-secondary flex-grow-0">
+            <div class="container py-5">
                 <h1 class="display-3 mb-4">Basic examples</h1>
                 <!--                 <div class="row icon-demo">
                     <div class="col-auto">
@@ -87,8 +93,8 @@
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
-            <div class="container pt-5">
-                <div class="row mb-3">
+            <div class="container">
+                <div class="row" id="basic-message">
                     <div class="col">
                         <p class="lead mb-3">Basic message</p>
                     </div>
@@ -100,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row" id="three-paramters-message">
                     <div class="col">
                         <p class="lead mb-3">Title, text under and icon</p>
                     </div>
@@ -116,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row">
                     <div class="col">
                         <p class="lead mb-3">A modal with a title, an error icon, a text, and a footer</p>
                     </div>
@@ -133,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row">
                     <div class="col">
                         <p class="lead mb-3">Custom HTML description</p>
                     </div>
@@ -161,7 +167,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row">
                     <div class="col">
                         <p class="lead mb-3">A dialog with three buttons</p>
                     </div>
@@ -186,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row">
                     <div class="col">
                         <p class="lead mb-3">A confirm dialog, with a function attached to the "Confirm" button</p>
                     </div>
@@ -214,7 +220,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row" id="custom-image">
                     <div class="col">
                         <p class="lead mb-3">A message with a custom image</p>
                     </div>
@@ -233,7 +239,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row" id="basic-timer-example">
                     <div class="col">
                         <p class="lead mb-3">A message with auto close timer</p>
                     </div>
@@ -266,7 +272,7 @@ Swal.fire({
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                <div class="row" id="ajax-request-example">
                     <div class="col">
                         <p class="lead mb-3">AJAX request example</p>
                     </div>
@@ -307,7 +313,92 @@ Swal.fire({
                     <div class="col-auto">
                         <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="8">Try me!</button>
                     </div>
-                </div>                
+                </div>
+
+                <div class="row" id="timer-methods-example">
+                    <div class="col">
+                        <p class="lead mb-3">Custom html message, timer use an timer methods </p>
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-8">
+                        <pre><code class="language-javascript hljs">let timerInterval;
+
+Swal.fire({
+    title: 'Auto close alert!',
+    html: `I will close in &lt;strong&gt;&lt;/strong&gt; seconds.&lt;br /&gt;&lt;br /&gt;&#13;&#10;    &lt;button id=&quot;increase&quot; class=&quot;btn btn-outline-info&quot;&gt;&#13;&#10;        I need 5 more seconds!&#13;&#10;    &lt;/button&gt;&lt;br /&gt;&lt;br /&gt;&#13;&#10;    &lt;button id=&quot;stop&quot; class=&quot;btn btn-outline-danger&quot;&gt;&#13;&#10;        Please stop the timer!!&#13;&#10;    &lt;/button&gt;&lt;br /&gt;&lt;br /&gt;&#13;&#10;    &lt;button id=&quot;resume&quot; class=&quot;btn btn-outline-primary&quot; disabled&gt;&#13;&#10;        Phew... you can restart now!&#13;&#10;    &lt;/button&gt;&lt;br /&gt;&lt;br /&gt;&#13;&#10;    &lt;button id=&quot;toggle&quot; class=&quot;btn btn-outline-dark&quot;&gt;&#13;&#10;        Toggle&#13;&#10;    &lt;/button&gt;`,
+    timer: 10000,
+    position: 'center',
+    timerProgressBar: true,
+    customClass: {
+        confirmButton: 'btn btn-success btn-lg',
+        //popup: '',
+        actions: 'justify-content-center border-0 py-3 px-4 mt-3 mb-1'
+    },
+    didOpen: () => {
+        const content = Swal.getHtmlContainer();
+        const $ = content.querySelector.bind(content);
+
+        const stop = $('#stop');
+        const resume = $('#resume');
+        const toggle = $('#toggle');
+        const increase = $('#increase');
+
+        Swal.showLoading()
+
+        function toggleButtons() {
+            stop.disabled = !Swal.isTimerRunning();
+            resume.disabled = Swal.isTimerRunning();
+            if(Swal.isTimerRunning()) {
+                Swal.showLoading()
+            } else {
+                Swal.hideLoading()
+            }
+        }
+
+        stop.addEventListener('click', () => {
+            Swal.stopTimer()
+            toggleButtons()
+        })
+
+        resume.addEventListener('click', () => {
+            Swal.resumeTimer()
+            toggleButtons()
+        })
+
+        toggle.addEventListener('click', () => {
+            Swal.toggleTimer();
+            toggleButtons();
+        })
+
+        increase.addEventListener('click', () => {
+            Swal.increaseTimer(5000)
+        })
+
+        timerInterval = setInterval(() => {
+            Swal.getHtmlContainer().querySelector('strong')
+                .textContent = (Swal.getTimerLeft() / 1000)
+                    .toFixed(0)
+        }, 100)
+    },
+    willClose: () => {
+        clearInterval(timerInterval)
+    },
+    didClose: () => {
+        SwalQuestion.fire({
+            text: "Are you ready?"
+        }).then(result => {
+            if (result.isConfirmed) {
+                SwalQuestion.fire({
+                    text: 'Are you free?'
+                })
+            }
+        })
+    }
+});</code></pre>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-lg rounded-0" data-example="9">Try me!</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -469,6 +560,94 @@ Swal.fire({
                                 })
                             }
                         });
+                        this.do[9] = () => {
+                            let timerInterval;
+
+                            Swal.fire({
+                                title: 'Auto close alert!',
+                                html:  `I will close in <strong></strong> seconds.<br /><br />
+                                        <button id="increase" class="btn btn-outline-info">
+                                            I need 5 more seconds!
+                                        </button><br /><br />
+                                        <button id="stop" class="btn btn-outline-danger">
+                                            Please stop the timer!!
+                                        </button><br /><br />
+                                        <button id="resume" class="btn btn-outline-primary" disabled>
+                                            Phew... you can restart now!
+                                        </button><br /><br />
+                                        <button id="toggle" class="btn btn-outline-dark">
+                                            Toggle
+                                        </button>`,
+                                timer: 10000,
+                                position: 'center',
+                                timerProgressBar: true,
+                                customClass: {
+                                    confirmButton: 'btn btn-success btn-lg',
+                                    //popup: '',
+                                    actions: 'justify-content-center border-0 py-3 px-4 mt-3 mb-1'
+                                },
+                                didOpen: () => {
+                                    const content = Swal.getHtmlContainer();
+                                    const $ = content.querySelector.bind(content);
+
+                                    const stop = $('#stop');
+                                    const resume = $('#resume');
+                                    const toggle = $('#toggle');
+                                    const increase = $('#increase');
+
+                                    Swal.showLoading()
+
+                                    function toggleButtons() {
+                                        stop.disabled = !Swal.isTimerRunning();
+                                        resume.disabled = Swal.isTimerRunning();
+                                        if(Swal.isTimerRunning()) {
+                                            Swal.showLoading()
+                                        } else {
+                                            Swal.hideLoading()
+                                        }
+                                    }
+
+                                    stop.addEventListener('click', () => {
+                                        Swal.stopTimer()
+                                        toggleButtons()
+                                    })
+
+                                    resume.addEventListener('click', () => {
+                                        Swal.resumeTimer()
+                                        toggleButtons()
+                                    })
+
+                                    toggle.addEventListener('click', () => {
+                                        Swal.toggleTimer();
+                                        toggleButtons();
+                                    })
+
+                                    increase.addEventListener('click', () => {
+                                        Swal.increaseTimer(5000)
+                                    })
+
+                                    timerInterval = setInterval(() => {
+                                        Swal.getHtmlContainer().querySelector('strong')
+                                            .textContent = (Swal.getTimerLeft() / 1000)
+                                                .toFixed(0)
+                                    }, 100)
+                                },
+                                willClose: () => {
+                                    clearInterval(timerInterval)
+                                },
+                                didClose: () => {
+                                    SwalQuestion.fire({
+                                        text: "Are you ready?"
+                                    }).then(result => {
+                                        if (result.isConfirmed) {
+                                            SwalQuestion.fire({
+                                                text: 'Are you free?'
+                                            })
+                                        }
+                                    })
+                                }
+                            });
+                        }
                     }
                 }
                 const buttons = doc.querySelectorAll('[data-example]');
