@@ -4,7 +4,7 @@
  * (c) Bruno Migliaretti 2022
  * https://github.com/magicbruno/SwalStrap5
  * 
- * Version 1.0.7
+ * Version 1.0.8
  **********************************************/
 (function (doc, win) {
     "use strict";
@@ -87,7 +87,7 @@
         toastStyle = '';
 
         // Version
-        get VERSION () { return '1.0.7' };
+        get VERSION () { return '1.0.8' };
 
         /**
          * Property: classes used for new popups/toasts created with fire method.
@@ -733,9 +733,11 @@
                         let result = preConfirm(self.modalInputValue);
                         if (result && typeof (result) === 'object' && typeof (result.then) === 'function') {
                             result.then(data => {
-                                self.modalResult = new SweetAlertResult(true, false, data);
-                                self.modal.hide();
-                            });
+                                if(data) {
+                                    self.modalResult = new SweetAlertResult(true, false, data);
+                                    self.modal.hide();                                    
+                                }
+                            })
                         } else if (!(result === false || self.validationMessage)) {
                             self.modalResult = new SweetAlertResult(true, false, result || self.modalInputValue);
                             self.modal.hide();
