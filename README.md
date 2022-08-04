@@ -5,7 +5,7 @@ A Swetalert2 and Bootbox.js alternative build on Bootstrap 5 Modal and Bootstrap
 The easiest way to get started is load Swalstrap form CDN:
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.6/dist/js/swalstrap5_all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.7/dist/js/swalstrap5_all.min.js"></script>
 ```
 swalstrap5_all.js will load automatically Swalstrap style sheet and wil create a default instance of Swalstrap named Swal (an aliased as swal, Sweetalert and sweetalert).
 
@@ -17,11 +17,11 @@ Now you can use Swalstrap applying fire method to Swal:
 ```
 If you prefer you can load Swalstrap style sheet separately:
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.6/dist/css/swalstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.7/dist/css/swalstrap.min.css">
 ```
 and load swalstrap5.js version:
 ```
-<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.6/dist/js/swalstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.7/dist/js/swalstrap5.min.js"></script>
 ```
 In this case you must create at least an instance of Swalstrap an then use it to open your popups:
 ```
@@ -36,7 +36,7 @@ In this case you must create at least an instance of Swalstrap an then use it to
 
 Alternatively you can install package via npm:
 ```
-npm install @magicbruno/swalstrap5@1.0.6
+npm install @magicbruno/swalstrap5@1.0.7
 ```
 clone the git package:
 ```

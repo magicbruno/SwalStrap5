@@ -4,7 +4,7 @@
  * (c) Bruno Migliaretti 2022
  * https://github.com/magicbruno/SwalStrap5
  * 
- * Version 1.0.6
+ * Version 1.0.7
  **********************************************/
 (function (doc, win) {
     "use strict";
@@ -87,7 +87,7 @@
         toastStyle = '';
 
         // Version
-        get VERSION () { return '1.0.6' };
+        get VERSION () { return '1.0.7' };
 
         /**
          * Property: classes used for new popups/toasts created with fire method.
@@ -296,6 +296,7 @@
 
         // property: Modal input value
         get modalInputValue() {
+            let value = '';
             if (this.textLikeInputs.indexOf(this.config.input) > -1)
                 value = this.modalElement.querySelector('[data-swalstrap="input"]').value;
             else if (this.config.input == 'select') {
