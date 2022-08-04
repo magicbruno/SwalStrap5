@@ -82,10 +82,10 @@
 &lt;/script&gt;</code></pre>  
                 <div class="mb-2">If you use <code>swalstrap5_all.js</code> or <code>swalstrap5_all.min.js</code> instead:</div> 
                 <pre class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.5/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <div class="mb-2">CSS styles will be loaded automatically and a default instance of Swalstrap name Swal (ad aliased as swal, Sweetalert and sweetalert) 
+                <div class="mb-2">CSS styles will be loaded automatically and a default instance of Swalstrap named Swal (ad aliased as swal, Sweetalert and sweetalert) 
                     will be created.</div> 
                 <p>In both cases, you may create customized instances of Swalstrap passing a set of options as parameter of the constructor. This options will became 
-                    the default options applied to popups and toasts open with the fire method.
+                    the default options applied to popups and toasts open with the fire method. <a href="customization.html">See here a working example</a>.
                 </p>
                 <h1>Options</h1>
                 <div class="table-responsive">
@@ -163,6 +163,16 @@
                                 <td>boolean</td>
                                 <td>false</td>
                                 <td>Whether or not an alert should be treated as a toast notification. This option is normally coupled with the <strong>position</strong> parameter and a timer.&nbsp;</td>
+                            </tr>
+                            <tr id="toastStyle">
+                                <td>
+                                <h5>toastStyle</h5>
+                                </td>
+                                <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' | 'auto' | ''</td>
+                                <td>''</td>
+                                <td>By default toast background color is inherited form Bootstrap. Setting toastStyle, toast background are styled 
+                                    using bootstrap styles. Icon and foreground color will be white. If 'auto', toast style is determined by icon type. 
+                                </td>
                             </tr>
                             <tr id="input">
                                 <td>
@@ -597,6 +607,16 @@
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Get the input DOM node, this method works with input parameter.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <h5><code>Swal.getInputValue()</code></h5>
+                                </td>
+                                <td>boolean | string</td>
+                                <td>Get the value of the input. If input is text, email, password, number, textarea, url or select returns the <code>value</code> 
+                                    of the element, if input is checkbox returns the checkbox state (true | false), if input is radio return the 
+                                    <code>value</code> of checked option or <code>null</code> if none is checked.
+                                </td>
                             </tr>
                             <tr>
                                 <td>

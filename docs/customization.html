@@ -106,12 +106,12 @@
                     instead:</div>
                 <pre
                     class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.5/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <div class="mb-2">CSS styles will be loaded automatically and a default instance of Swalstrap name Swal
+                <div class="mb-2">CSS styles will be loaded automatically and a default instance of Swalstrap named Swal
                     (ad aliased as swal, Sweetalert and sweetalert)
                     will be created.</div>
                 <div class="mb-2">In both cases, you may create customized instances of Swalstrap passing a set of
                     options as parameter of the constructor. This options will became
-                    the default options applied to popups and toasts open with the fire method.
+                    the default options applied to popups and toasts that will be open with the fire method.
                 </div>
                 <pre class="mb-3"><code class="language-javascript hljs">const questionIt = new Swalstrap({
     input: 'radio',
@@ -326,7 +326,7 @@ async function doTest(lang) {
             backdrop: false,
             showCloseButton: true,
             preConfirm: (input) => {
-                if (input == 'No selections') {
+                if (input == null) {
                     questionIt.showValidationMessage('Fai una scelta');
                     return false;
                 }
@@ -348,7 +348,7 @@ async function doTest(lang) {
             backdrop: false,
             showCloseButton: true,
             preConfirm: (input) => {
-                if (input == 'No selections') {
+                if (input == null) {
                     questionEn.showValidationMessage('Make a choose!');
                     return false;
                 }

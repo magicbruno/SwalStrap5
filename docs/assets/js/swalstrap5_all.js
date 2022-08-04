@@ -4,6 +4,7 @@
  * (c) Bruno Migliaretti 2022
  * https://github.com/magicbruno/SwalStrap5
  * 
+ * Version 1.0.6
  **********************************************/
 (function (doc, win) {
     "use strict";
@@ -49,11 +50,7 @@
                                     <path
                                         d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                 </svg>
-                            </div>`;
-    const ICON_SUCCESS_ALT =   `<svg xmlns="http://www.w3.org/2000/svg" width="2.2rem" height="2.2rem" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                                </svg>`                      
+                            </div>`;                      
 
     const DismissReason = Object.freeze({
         cancel: 'cancel',
@@ -73,7 +70,6 @@
          */
         constructor(options) {
             const opt = options || {};
-            //this.config = new SwalOptions(opt);
             // Create unique token to construct modal ids
             this.currentId = this.createId();
             this.DismissReason = DismissReason;
@@ -90,8 +86,13 @@
         customClass = {};
         toastStyle = '';
 
-        get VERSION () { return '1.0.5' };
+        // Version
+        get VERSION () { return '1.0.6' };
 
+        /**
+         * Property: classes used for new popups/toasts created with fire method.
+         *           (This object is merged with customClass option)
+         */
         get defaultClasses() {
             return {
                 container: '',
@@ -117,6 +118,9 @@
             }
         }
 
+        /**
+         * Merge defaultClasses object with config customClass object
+         */
         resetCustomClasses() {
             let defaults = this.defaultClasses;
             let custom = this.config.customClass;
@@ -173,7 +177,6 @@
          * property: modal html content based on config
          */
         get modalContent() {
-            // TODO: popolare select e radio
             this.currentId = this.createId();
             return `<div class="modal fade ${this.customClass.container}" id="modal_${this.currentId}" tabindex="-1" role="dialog" aria-labelledby="${this.config.title}" 
                         aria-hidden="true">
@@ -242,6 +245,9 @@
                     </div>`;
         };
 
+        /****
+         * property: Toast content based on config
+         */
         get toastContent() {
             return `<div class="toast toast-swal position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
                         aria-live="assertive" aria-atomic="true" id="toast_${this.currentId}">
@@ -290,7 +296,6 @@
 
         // property: Modal input value
         get modalInputValue() {
-            let value = 'Not implemented yet';
             if (this.textLikeInputs.indexOf(this.config.input) > -1)
                 value = this.modalElement.querySelector('[data-swalstrap="input"]').value;
             else if (this.config.input == 'select') {
@@ -301,7 +306,7 @@
                 if (selected)
                     value = selected.value;
                 else
-                    value = 'No selections';
+                    value = null;
             } else if (this.config.input == 'checkbox')
                 value = this.modalElement.querySelector('[data-swalstrap="checkbox"] > input').checked;
             else if (this.config.input == 'textarea')
@@ -309,6 +314,9 @@
             return value;
         }
 
+        /**
+         * property: translate config position into bootstrap 5 class
+         */
         get toastPosition() {
             switch (this.config.position) {
                 case 'top-start':
@@ -335,6 +343,9 @@
             }
         }
 
+        /**
+         * property: translate config toastStyle into bootstrap 5 class
+         */        
         get toastBackground() {
             let style = this.config.toastStyle;
             let icon = this.config.icon;
@@ -354,7 +365,7 @@
         }
 
         /**
-         * Validation message (if not empty blocks dialog confirm action)
+         * Validation message (if empty hide popup alert else show it)
          */
         _validationMessage = '';
         set validationMessage(message) {
@@ -371,12 +382,16 @@
             return this._validationMessage;
         }
 
+        /**
+         * proerty: return true id current instance is showing a toast false otherwise
+         */
         get isToast() {
             if(bootstrap.Toast)
                 return this.modal instanceof bootstrap.Toast;
             return false;
         }
 
+        // Template of radio button
         getRadioTemplate(text, value, id) {
             let html = `<div class="form-check form-check-inline col-auto">
                             <input class="form-check-input" type="radio" name="radio${this.currentId}" id="r${this.currentId}${id}" value="${value}">
@@ -466,8 +481,6 @@
             return '';
         }
 
-
-
         /**
          * Dispose current modal and html element
          */
@@ -498,8 +511,11 @@
             return temp.firstChild;
         }
 
+        /**
+         * Check if Bootstrap 5 is running and, in case, trow appropriate errors
+         * @returns boolean
+         */
         checkBootstrap() {
-
             if (!bootstrap) {
                 this.error(NO_BOOTSTRAP);
                 return false;
@@ -521,6 +537,10 @@
             return true;
         }
 
+        /**
+         * Connects Bootstrap events to Swalstrap callbacks
+         * @returns void
+         */
         initCallbacks() {
             if (!this.modal)
                 return;
@@ -585,6 +605,7 @@
                 return this.doBootrapToast();
         }
 
+        // Open toast
         doBootrapToast() {
             const self = this;
              // Bootstrap modal options
@@ -623,6 +644,7 @@
             });
         }
 
+        // Open popup
         doBootstrapModal() {
             const self = this;
             // Bootstrap modal options
@@ -741,16 +763,32 @@
             });
         }
 
+        /************************************************************************************************
+         * SWALSTRAP UTILITIES
+         ================================================================================================*/
+
+        /**
+         * Sho a message in popup alert
+         * @param {string} message 
+         */
         showValidationMessage(message) {
             this.validationMessage = message;
         }
 
+        /**
+         * Popup/toast is shown?
+         * @returns boolean
+         */
         isVisible() {
             if (this.modal)
                 return this.modal._isShown;
             return false;
         }
 
+        /**
+         * Close popup
+         * @param {boolean} isTimer defalts to false
+         */
         close(isTimer = false) {
             if (isTimer) {
                 this.modalResult = new SweetAlertResult(false, false, this.modalInputValue || null);
@@ -759,6 +797,9 @@
             this.modal.hide();
         }
 
+        /**
+         * Getting popup DOM nodes
+         */
         getContainer() {
             return this.modalElement;
         }
@@ -799,12 +840,23 @@
             return this.modalElement.querySelector('[data-swalstrap="btn-cancel"]');
         }
 
+        getValidationMessage() {
+            return this.modalElement.querySelector('[data-swalstrap="alert"]');
+        }
+        // end popup DOM nodes
+
+        /**
+         * Show loading animation
+         */
         showLoading() {
             let actions = this.modalElement.querySelector('[data-swalstrap="actions"]');
             actions.classList.add('loading-spin');
             actions.removeAttribute('hidden');
         }
 
+        /**
+         * Hide loading animation
+         */
         hideLoading() {
             let actions = this.modalElement.querySelector('[data-swalstrap="actions"]');
             actions.classList.remove('loading-spin');
@@ -812,10 +864,18 @@
                 actions.setAttribute('hidden', '');
         }
 
+        /**
+         * Is loading animation shown?
+         * @returns boolean
+         */
         isLoading() {
             return this.modalElement.querySelector('.modal-dialog').classList.contains('loading-spin');
         }
 
+        /**
+         * Return input HTML element
+         * @returns DOM Node | Node List
+         */
         getInput() {
             if (this.textLikeInputs.indexOf(this.config.input) > -1)
                 return this.modalElement.querySelector('[data-swalstrap="input"]');
@@ -829,10 +889,17 @@
                 return this.modalElement.querySelector('[data-swalstrap="textarea"]');
         }
 
-        getValidationMessage() {
-            return this.modalElement.querySelector('[data-swalstrap="alert"]');
+        /**
+         * Input value
+         * @returns string | boolen | null
+         */
+        getInputValue() {
+            return this.modalInputValue;
         }
 
+        /**
+         * Init Timer instance
+         */
         initTimer() {
             this.timer = new Timer(() => { this.close(true); }, this.config.timer);
             if (this.config.timerProgressBar === true) {
@@ -840,23 +907,39 @@
             }
         }
 
+        /**
+         * Time to expiry
+         * @returns number
+         */
         getTimerLeft() {
             if (this.timer)
                 return this.timer.getTimerLeft();
             return 0;
         }
 
+        /**
+         * Stop timer, return time to expiry
+         * @returns number
+         */
         stopTimer() {
             if (this.timer)
                 return this.timer.stop();
             return 0;
         }
 
+        /**
+         * Resume timer, return time to expiry
+         * @returns number
+         */
         resumeTimer() {
             if (!this.timer) return 0;
             return this.timer.start();
         }
 
+        /**
+         * Toggle timer, return time to expiry
+         * @returns number
+         */        
         toggleTimer() {
             if (!this.timer) return 0;
             if (this.timer.isRunning())
@@ -865,16 +948,25 @@
                 this.timer.start();
         }
 
+        /**
+         * Is timee running?
+         * @returns boolean
+         */        
         isTimerRunning() {
             if (!this.timer) return false;
             return this.timer.isRunning();
         }
 
+        /**
+         * Increase timer delay, return time to expiry
+         * @returns number
+         */         
         increaseTimer(n) {
             if (!this.timer) return 0;
             return this.timer.increase(n);
         }
 
+        // Clear progress bar
         clearTimerProgressBar() {
             if (!this.timer) return;
             this.timer.clearProgressBar();
