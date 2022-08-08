@@ -1,5 +1,6 @@
 <h1 id="sweet-alert-for-bootstrap-5">Sweet Alert for Bootstrap 5</h1>
-<p>A <strong>Swetalert</strong> and <strong>Bootbox</strong> alternative build on Bootstrap 5 Modal and Toast components.</p>
+<p>A <strong>Swetalert</strong> and <strong>Bootbox</strong> alternative build on Bootstrap 5 Modal and Toast components. Do you need Swalstrap for Bootstrap 4? 
+<a href="https://github.com/magicbruno/SwalStrap4">Go here</a>.</p>
 <h2 id="getting-started">Getting started</h2>
 <p>Load Swalstrap form CDN:</p>
 <pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;

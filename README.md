@@ -1,5 +1,6 @@
 # Sweet Alert for Bootstrap 5
-A **Swetalert** and **Bootbox** alternative build on Bootstrap 5 Modal and Toast components.
+A **Swetalert** and **Bootbox** alternative build on Bootstrap 5 Modal and Toast components. Do you need Swalstrap for Bootstrap 4? 
+[Go here](https://github.com/magicbruno/SwalStrap4).
 
 ## Getting started 
 Load Swalstrap form CDN:
