@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top fm-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top fm-light">
         <div class="container justify-content-between">
             <a class="navbar-brand p-0 d-flex align-items-center" href="#">
                 <svg id="Livello_1" class="me-2 h-100" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg"
@@ -80,12 +80,14 @@
                     <div class="col-auto">
                         <a class="btn btn-secondary border" href="#" role="button">Question</a>
                     </div>
-
+                    <div class="col-auto">
+                        <a class="btn btn-primary border" href="#" role="button">Toasts</a>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
+        <div class="d-flex align-items-center justify-content-between container flex-grow-1 modal-swal">
             <div class="swal-bs-icon-container">
                 <div class="icon icon-success show-border" hidden>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="p-2 flip" viewBox="0 0 16 16">
@@ -128,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-evenly flex-grow-1 toast-swal">
+        <div class="d-flex align-items-center justify-content-between container flex-grow-1 toast-swal">
 
             <div class="icon icon-success show-border" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flip" viewBox="0 0 16 16">
@@ -252,9 +254,73 @@
                                         toastStyle: 'auto'
                                     })
                                 });
+                        } else {
+                            doToast();
                         }
                     });
-                })
+                });
+
+                async function doToast() {
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: top-start, no style ',
+                        icon: 'info',
+                        position: 'top-start'
+                    });
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: top, style auto ',
+                        icon: 'info',
+                        position: 'top',
+                        toastStyle: 'auto'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: top-end, style dark ',
+                        icon: 'question',
+                        position: 'top-end',
+                        toastStyle: 'dark'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: center-end, style primary ',
+                        icon: 'info',
+                        position: 'center-end',
+                        toastStyle: 'primary'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: bottom-end, style none ',
+                        icon: 'error',
+                        position: 'bottom-end'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: bottom, style auto ',
+                        icon: 'error',
+                        position: 'bottom',
+                        toastStyle: 'auto'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: bottom-end, style none ',
+                        icon: 'warning',
+                        position: 'bottom-start'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: center-start, style auto ',
+                        icon: 'warning',
+                        position: 'center-start',
+                        toastStyle: 'auto'
+                    })
+                    await toaster.fire({
+                        title: 'Toast demo',
+                        text: 'Position: center, style none ',
+                        icon: 'question',
+                        position: 'center'
+                    })
+                }
 
             })(document)
     </script>

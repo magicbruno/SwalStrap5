@@ -1,16 +1,16 @@
 <h1 id="sweet-alert-for-bootstrap-5">Sweet Alert for Bootstrap 5</h1>
-<p>A Swetalert2 and Bootbox.js alternative build on Bootstrap 5 Modal and Bootstrap 5 Toast components.</p>
+<p>A <strong>Swetalert</strong> and <strong>Bootbox</strong> alternative build on Bootstrap 5 Modal and Toast components.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>The easiest way to get started is load Swalstrap form CDN:</p>
+<p>Load Swalstrap form CDN:</p>
 <pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<p>swalstrap5_all.js will load automatically Swalstrap style sheet and wil create a default instance of Swalstrap named Swal (an aliased as swal, Sweetalert and sweetalert).</p>
-<p>Now you can use Swalstrap applying fire method to Swal:</p>
+<p>swalstrap5_all.js will load automatically Swalstrap stylesheet and will create a default instance of Swalstrap named Swal (an aliased as swal, Sweetalert and sweetalert).</p>
+<p>You can use Swalstrap applying fire method to the created instance:</p>
 <pre><code>&lt;script&gt;
     Swal.fire(&#39;Wanderful!&#39;,&#39;Swalstrap is working!&#39;,&#39;success&#39;)
 &lt;/script&gt;
 </code></pre>
-<p>If you prefer you can load Swalstrap style sheet separately:</p>
+<p>If you prefer you can load Swalstrap stylesheet (or a customized one) separately:</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/css/swalstrap.min.css&quot;&gt;
 </code></pre>
 <p>and load swalstrap5.js version:</p>
@@ -24,8 +24,8 @@
     mySwal.fire(&#39;Wanderful!&#39;,&#39;Swalstrap is working!&#39;,&#39;success&#39;);
 &lt;/script&gt;
 </code></pre>
-<h2 id="downloading">Downloading</h2>
-<p>Alternatively you can install package via npm:</p>
+<h2 id="downloading-swalstrap">Downloading Swalstrap</h2>
+<p>You can install package via npm:</p>
 <pre><code>npm install @magicbruno/swalstrap5@1.0.8
 </code></pre>
 <p>clone the git package:</p>
@@ -34,8 +34,8 @@
 <p>or <a href="https://github.com/magicbruno/SwalStrap5/archive/refs/heads/main.zip">download it</a>.</p>
 <blockquote>
 <h3 id="warning">Warning</h3>
-<p>Swalstrap is inspired to Sweetalert NOT a clone. Features are reproduced with radically different coding.
-Il you are a sweetalert user, you are highly recommended to read documentation and test examples.</p>
+<p>Swalstrap is inspired to Sweetalert NOT a clone. Features are reproduced not copied.
+So there are differences. Watch documentation and test examples.</p>
 </blockquote>
 <ul>
 <li><a href="https://magicbruno.github.io/SwalStrap5/api.html">Documentation</a>.</li>
