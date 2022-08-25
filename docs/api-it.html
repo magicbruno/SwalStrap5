@@ -1,0 +1,1372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Documentation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css'
+        integrity='sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q=='
+        crossorigin='anonymous' />
+    <style>
+        body,
+        html {
+            min-height: 100vh;
+        }
+
+        .navbar-brand {
+            height: 46px;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top fm-light">
+        <div class="container justify-content-between">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                <svg id="Livello_1" class="me-2 h-100" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 435.93 485.88">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffa300;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M326.24,485.88H62.16c16.51-31,33.09-62.05,49.5-93.15,3.18-6,5.9-12.32,8.52-18.63,2-4.72.79-5.5-4-6.37-5.43-1-11.21-2.22-15.83-5C90.11,356.57,83,347.24,77.77,336.58a18.48,18.48,0,0,1-2.22-7.1c-.58-16.64.2-33.4,8.3-48.2,4.3-7.86,4-13.15-1.06-20-4.74-6.46-8.26-14-6-22.48a41.74,41.74,0,0,0-2.29-28.36c-5.69-12.77-12.22-25.15-18.24-37.77-5.76-12.08-14.35-19.23-28.6-18.22-5.5.39-9.85-2.21-12.23-7.78a7.42,7.42,0,0,0-4.75-3.48c-9.59-2-13.62-9-8.37-17.22A87.73,87.73,0,0,1,18.7,106.73c17.4-15,37.89-25,59.35-32.48C123.84,58.29,169.67,42.37,216,28,258,15,301,5.12,344.9.6a111.08,111.08,0,0,1,29.76.89c10.58,1.82,14.62,11,10.79,21-1.37,3.57-1.34,6.35,1.86,8.82,3.8,2.94,3.26,6.24.36,9.45-3.24,3.58-6.31,7.39-9.94,10.54-8.56,7.41-11.13,16.68-9.36,27.47A117.26,117.26,0,0,0,370.93,91c4.46,16.06,8.94,32.11,13.68,48.09a139.08,139.08,0,0,0,6.82,18.72c2,4.43,2.34,8.2-.56,12.13-3.31,4.47-3.41,9.23-2.54,14.67,1,5.93,1.62,12.42.14,18.08-2,7.57-2.11,14,3,20.14,2.24,2.67,4.24,5.58,6.67,8.07,10.62,10.83,21.23,21.67,32.09,32.24,6,5.85,6.22,13.05,5.24,20.34-.31,2.27-2.94,4.87-5.18,6.11a112.25,112.25,0,0,1-15.06,6.6c-7.88,2.94-10.9,7.46-10.22,15.81.39,4.65,1,12.35.68,17-.3,3.83-5.07,4.51-5.88,8.32-.48,2.26,2.87.92,3.6,2.92,2.18,6,1.45,15.23-3.38,20.14a21.11,21.11,0,0,0-3.95,6.33A11,11,0,0,0,397,378c7.41,10.92,3.15,26.36-7,32.18a228.42,228.42,0,0,1-41.87,18.59c-11.09,3.67-23.19,4.34-34.87,6.09-4.12.62-6.64,2.33-6.42,6.65.29,6,1,11.89,1.29,17.84.45,9.17,3.56,16.74,11.81,21.66A63.45,63.45,0,0,1,326.24,485.88Z" />
+                </svg>
+                <span class="h2 mt-n2 fw-light">sistem<span class="fw-bold">interattivi</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            </div>
+            <script>
+                (function (doc) {
+                    const targetElement = doc.querySelector('#navbarCollapse');
+                    fetch('menu.xml')
+                        .then(response => response.text())
+                        .then(result => targetElement.innerHTML = result)
+                        .catch(error => console.error(error));
+                })(document);
+            </script>
+        </div>
+    </nav>
+    <div class="d-flex flex-column justify-content-between align-items-stretch min-vh-100" style="padding-top: 62px">
+        <div class="text-bg-secondary py-5 flex-grow-0">
+            <div class="container">
+                <h1 class="display-3 mb-4 d-flex justify-content-between align-items-center">
+                    Documentazione<img src="img/it.svg" style="height: 2rem; " alt="Bandiera italiana">
+                </h1>
+
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
+            <div class="container pt-5">
+                <h1>Constructor</h1>
+                <div class="mb-2">Se carichi <code>swalstrap5.js</code> o <code>swalstrap5.min.js</code>:</div>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <div class="mb-2">verrà caricata solo la <code>classe</code> <strong>Swalstrap</strong>. Per poter usare
+                    la componente devi
+                    caricare il foglio di stile:</div>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/docs/assets/css/swalstrap.min.css&quot;&gt;</code></pre>
+                <div class="mb-2">e creare al meno un'istanza della classe:</div>
+                <pre class="mb-2"><code class="language-html hljs">&lt;script&gt;
+    const mySwal = new Swalstrap();
+&lt;/script&gt;</code></pre>
+                <div class="mb-2">Se invece usi <code>swalstrap5_all.js</code> or <code>swalstrap5_all.min.js</code>:
+                </div>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <div class="mb-2">gli stili CSS verranno caricati automaticamente e verrà creata un'istanza predefinita
+                    di Swalstrap chiamata Swal
+                    (verranno creati anche alcuni alias: swal, Sweelelert e sweelelert).</div>
+                <p>In entrambi i casi, è possibile creare istanze personalizzate di swalstrap passando un set di opzioni
+                    come parametro del costruttore.
+                    Queste opzioni saranno le opzioni predefinite applicate a popup e toast create con l'istanza.
+                    <a href="customization.html">Vedi qui un esempio</a>.
+                </p>
+                <h1>Opzioni</h1>
+                <div class="table-responsive">
+                    <table class="table table-striped" id="api">
+                        <tbody>
+                            <tr class="titles">
+                                <th>Property</th>
+                                <th>Type</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr id="title">
+                                <td>
+                                    <h5>title</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>The title of the popup, as HTML.</td>
+                            </tr>
+                            <tr id="titleText">
+                                <td>
+                                    <h5>titleText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>The title of the popup, as text. Useful to avoid HTML injection.</td>
+                            </tr>
+                            <tr id="html">
+                                <td>
+                                    <h5>html</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>A HTML content&nbsp;for the popup.<br />
+                                    If <strong>text</strong> and <strong>html</strong> parameters are provided in the
+                                    same time, <strong>html</strong> will be used.&nbsp;<br />
+                                    Swalstrap does NOT sanitize this parameter. It is the developer's responsibility to
+                                    escape any user input when using the <strong>html</strong> option, so XSS attacks
+                                    would be prevented.</td>
+                            </tr>
+                            <tr id="text">
+                                <td>
+                                    <h5>text</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>A text content for the popup.<br />
+                                    If <strong>text</strong> and <strong>html</strong> parameters are provided in the
+                                    same time, <strong>html</strong> will be used.</td>
+                            </tr>
+                            <tr id="icon">
+                                <td>
+                                    <h5>icon</h5>
+                                </td>
+                                <td>'warning' | 'error' | 'success' | 'info' | 'question' | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>The icon of the popup. Swalstrap comes with 5 built-in icon which will show a
+                                    corresponding icon animation: <strong>warning</strong>, <strong>error</strong>,
+                                    <strong>success</strong>, <strong>info</strong>, and <strong>question</strong>.</td>
+                            </tr>
+                            <tr id="footer">
+                                <td>
+                                    <h5>footer</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>The footer of the popup. Can be either plain text or HTML.</td>
+                            </tr>
+                            <tr id="backdrop">
+                                <td>
+                                    <h5>backdrop</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Whether or not the popup should show a full screen click-to-dismiss backdrop.</td>
+                            </tr>
+                            <tr id="toast">
+                                <td>
+                                    <h5>toast</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Whether or not an alert should be treated as a toast notification. This option is
+                                    normally coupled with the <strong>position</strong> parameter and a timer.&nbsp;
+                                </td>
+                            </tr>
+                            <tr id="toastStyle">
+                                <td>
+                                    <h5>toastStyle</h5>
+                                </td>
+                                <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' |
+                                    'auto' | ''</td>
+                                <td>''</td>
+                                <td>By default toast background color is inherited form Bootstrap. Setting toastStyle,
+                                    toast background are styled
+                                    using bootstrap styles. Icon and foreground color will be white. If 'auto', toast
+                                    style is determined by icon type.
+                                </td>
+                            </tr>
+                            <tr id="input">
+                                <td>
+                                    <h5>input</h5>
+                                <td>
+                                    <p>'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'radio' |
+                                        'checkbox' | 'file' | 'url' | <em>undefined</em></p>
+                                </td>
+                                <td><em>undefined</em></td>
+                                <td>Input field type, can be <strong>text</strong>, <strong>email</strong>,
+                                    <strong>password</strong>, <strong>number</strong>, <strong>textarea</strong>,
+                                    <strong>select</strong>, <strong>radio</strong>, <strong>checkbox</strong>,
+                                    <strong>file</strong> and <strong>url</strong>.</td>
+                            </tr>
+                            <tr id="position">
+                                <td>
+                                    <h5>position</h5>
+                                </td>
+                                <td>
+                                    <p>'top' | 'top-start' | 'top-end' | 'center' | 'center-start' | 'center-end' |
+                                        'bottom' | 'bottom-start' | &nbsp;'bottom-end'</p>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>Toast position, can be <strong>'top'</strong>, <strong>'top-start'</strong>,
+                                    <strong>'top-end'</strong>, <strong>'center'</strong>,
+                                    <strong>'center-start'</strong>, <strong>'center-end'</strong>,
+                                    <strong>'bottom'</strong>, <strong>'bottom-start'</strong>, or <strong>'bottom-end',
+                                    </strong>popup position can be <strong>'center' </strong>or <strong>'top'
+                                    </strong>(other setting will be ignored)</td>
+                            </tr>
+                            <tr id="customClass">
+                                <td>
+                                    <h5>customClass</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>A custom CSS class for the popup. These are th default classes:
+                                    <pre>
+                    <code class="language-javascript">{
+    container: '',
+    popup: '',
+    header: 'py-0 border-0 px-3 mt-3 mb-1',
+    title: 'text-center h2 mt-3 mb-3',
+    toastTitle: 'my-0 h5',
+    closeButton: 'btn-close',
+    icon: '',
+    image: 'img-fluid mx-auto mt-4 mb-3',
+    htmlContainer: 'text-center lead',
+    toastHtml: '',
+    input: 'mt-3 mb-1',
+    inputLabel: '',
+    validationMessage: `justify-content-center d-flex rounded-0 align-items-center 
+        border-0 py-2 px-4 mt-3 mb-1 alert alert-danger`,
+    actions: 'justify-content-center border-0 py-0 px-4 mt-3 mb-1',
+    confirmButton: 'btn btn-primary',
+    denyButton: 'btn btn-danger',
+    cancelButton: 'btn btn-secondary',
+    loader: '',
+    footer: 'justify-content-center py-0 pt-2 px-4 mt-3 mb-1',
+    timerProgressBar: ''
+}</code></pre>
+                                </td>
+                            </tr>
+                            <tr id="timer">
+                                <td>
+                                    <h5>timer</h5>
+                                </td>
+                                <td>number</td>
+                                <td>0</td>
+                                <td>Auto close timer of the popup (or of the toast notification). Set in ms
+                                    (milliseconds).</td>
+                            </tr>
+                            <tr id="timerProgressBar">
+                                <td>
+                                    <h5>timerProgressBar</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>If set to true, the timer will have a progress bar at the bottom of the popup. (It
+                                    doesn't affect toasts)</td>
+                            </tr>
+                            <tr id="allowOutsideClick">
+                                <td>
+                                    <h5>allowOutsideClick</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>If set to <strong>false</strong>, the user can't dismiss the popup by clicking on
+                                    the backdrop.</td>
+                            </tr>
+                            <tr id="allowEscapeKey">
+                                <td>
+                                    <h5>allowEscapeKey</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>If set to <strong>false</strong>, the user can't dismiss the popup by pressing the
+                                    <kbd>Esc</kbd> key.</td>
+                            </tr>
+                            <tr id="showConfirmButton">
+                                <td>
+                                    <h5>showConfirmButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>If set to <strong>false</strong>, a &quot;Confirm&quot; button will not be shown.
+                                </td>
+                            </tr>
+                            <tr id="showDenyButton">
+                                <td>
+                                    <h5>showDenyButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>If set to <strong>true</strong>, a &quot;Deny&quot; button will be shown. It can be
+                                    useful when you want a popup with 3 buttons.</td>
+                            </tr>
+                            <tr id="showCancelButton">
+                                <td>
+                                    <h5>showCancelButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>If set to <strong>true</strong>, a &quot;Cancel&quot; button will be shown, which
+                                    the user can click on to dismiss the modal.</td>
+                            </tr>
+                            <tr id="confirmButtonText">
+                                <td>
+                                    <h5>confirmButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'Ok'</td>
+                                <td>Use this to change the text on the &quot;Confirm&quot; button.</td>
+                            </tr>
+                            <tr id="denyButtonText">
+                                <td>
+                                    <h5>denyButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'No'</td>
+                                <td>Use this to change the text on the &quot;Deny&quot; button.</td>
+                            </tr>
+                            <tr id="cancelButtonText">
+                                <td>
+                                    <h5>cancelButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'Cancel'</td>
+                                <td>Use this to change the text on the &quot;Cancel&quot; button.</td>
+                            </tr>
+                            <tr id="showCloseButton">
+                                <td>
+                                    <h5>showCloseButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Set to <strong>true</strong> to show close button in top right corner of the popup.
+                                </td>
+                            </tr>
+                            <tr id="preConfirm">
+                                <td>
+                                    <h5>preConfirm</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Function to execute before confirming, may be async (Promise-returning) or
+                                    sync.<br />
+                                    Returned (or resolved) value can be:
+                                    <ul>
+                                        <li><strong>false</strong> to prevent a popup from closing</li>
+                                        <li>anything else to pass that value as the <strong>result.value</strong> of
+                                            <strong>Swal.fire()</strong></li>
+                                        <li><strong>undefined</strong> to keep the default <strong>result.value</strong>
+                                        </li>
+                                    </ul>
+                                    See <a href="basic-examples.html#ajax-request-example">ajax request example</a>.
+                                </td>
+                            </tr>
+                            <tr id="preDeny">
+                                <td>
+                                    <h5>preDeny</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Function to execute before denying, may be async (Promise-returning) or sync.<br />
+                                    Returned (or resolved) value can be:
+                                    <ul>
+                                        <li><strong>false</strong> to prevent a popup from closing</li>
+                                        <li>anything else to pass that value as the <strong>result.value</strong> of
+                                            <strong>Swal.fire()</strong></li>
+                                        <li><strong>undefined</strong> to keep the default <strong>result.value</strong>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr id="imageUrl">
+                                <td>
+                                    <h5>imageUrl</h5>
+                                </td>
+                                <td>string</td>
+                                <td><em>''</em></td>
+                                <td>Add a customized icon ore image for the popup. Should contain a string with the path
+                                    or URL to the image.</td>
+                            </tr>
+                            <tr id="imageAlt">
+                                <td>
+                                    <h5>imageAlt</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>An alternative text for the custom image.</td>
+                            </tr>
+                            <tr id="inputPlaceholder">
+                                <td>
+                                    <h5>inputPlaceholder</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Input field placeholder.</td>
+                            </tr>
+                            <tr id="inputValue">
+                                <td>
+                                    <h5>inputValue</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>
+                                    <p>Input field initial value.</p>
+
+                                    <ul>
+                                        <li>If the input type is <code><strong>select</strong></code>,
+                                            inputValue&nbsp;will represent the selected
+                                            <code>&lt;option&gt;&nbsp;</code>.</li>
+                                        <li>If the input type is <code>checkbox</code>inputValue will represent the
+                                            checked state.</li>
+                                        <li>If the input type is <code>text</code>, <code>email</code>,
+                                            <code>number</code> or <code>textarea</code> inputValue represent the
+                                            initial value of the field.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr id="inputOptions">
+                                <td>
+                                    <h5>inputOptions</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>If <strong>input</strong> parameter is set to <strong>&quot;select&quot;</strong> or
+                                    <strong>&quot;radio&quot;</strong>, you can provide options. Can be a plain object,
+                                    with keys that represent option values and values that represent option text.</td>
+                            </tr>
+                            <tr id="inputAttributes">
+                                <td>
+                                    <h5>inputAttributes</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>HTML input attributes (e.g. <strong>min</strong>, <strong>max</strong>,
+                                    <strong>autocomplete</strong>, <strong>accept</strong>), that are added to the input
+                                    field. Object keys will represent attributes names, object values will represent
+                                    attributes values.</td>
+                            </tr>
+                            <tr id="validationMessage">
+                                <td>
+                                    <h5>validationMessage</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>A custom validation message for default validation (email and url input types).</td>
+                            </tr>
+                            <tr id="willOpen">
+                                <td>
+                                    <h5>willOpen</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Popup lifecycle hook. Synchronously runs before the popup is shown on screen.
+                                    Provides popup DOM element as the argument.</td>
+                            </tr>
+                            <tr id="didOpen">
+                                <td>
+                                    <h5>didOpen</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Popup lifecycle hook. Asynchronously runs after the popup has been shown on screen.
+                                    Provides popup DOM element as the argument.</td>
+                            </tr>
+                            <tr id="willClose">
+                                <td>
+                                    <h5>willClose</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Popup lifecycle hook. Synchronously runs when the popup closes by user interaction
+                                    (and not due to another popup being fired). Provides popup DOM element as the
+                                    argument.</td>
+                            </tr>
+                            <tr id="didClose">
+                                <td>
+                                    <h5>didClose</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Popup lifecycle hook. Asynchronously runs after the popup has been disposed by user
+                                    interaction (and not due to another popup being fired).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped" id="api">
+                        <tbody>
+                            <tr class="titles">
+                                <th>Proprietà </th>
+                                <th>Tipo </th>
+                                <th>Default </th>
+                                <th>Descrizione </th>
+                            </tr>
+                            <tr id="title">
+                                <td>
+                                    <h5>title</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Il titolo della popup, come HTML.</td>
+                            </tr>
+                            <tr id="titleText">
+                                <td>
+                                    <h5>titleText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Il titolo del popup come testo. Utile per evitare l'iniezione di HTML.</td>
+                            </tr>
+                            <tr id="html">
+                                <td>
+                                    <h5>html</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Un contenuto HTML per la popup. <br />
+                                    Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso tempo
+                                    verrà utilizzato <strong> html </strong>. & Nbsp; <br />
+                                    Swalstrap non <en>igienizza</en> questo parametro. È responsabilità dello
+                                    sviluppatore controllare l'input dell'utente quando si
+                                    utilizza l'opzione <strong> html </strong>.</td>
+                            </tr>
+                            <tr id="text">
+                                <td>
+                                    <h5>text</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Un contenuto di testo per la popup. <br />
+                                    Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso
+                                    tempo, verrà utilizzato <strong> html </strong>.</td>
+                            </tr>
+                            <tr id="icon">
+                                <td>
+                                    <h5>icon</h5>
+                                </td>
+                                <td>'warning' | 'error' | 'success' | 'info' | 'question' | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>L'icona del popup. Swalstrap viene fornito con 5 icone integrate che che verrà
+                                    mostrata con un'animazione:
+                                    <strong>warning</strong>, <strong>error</strong>, <strong>success</strong>,
+                                    <strong>info</strong>, and <strong>question</strong>.
+                                </td>
+                            </tr>
+                            <tr id="footer">
+                                <td>
+                                    <h5>footer</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Il footer della popup. Può essere testo semplice o HTML.</td>
+                            </tr>
+                            <tr id="backdrop">
+                                <td>
+                                    <h5>backdrop</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Indica se Viene mostrato o no un backdrop dietro la popup.</td>
+                            </tr>
+                            <tr id="toast">
+                                <td>
+                                    <h5>toast</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Viene visualizzato un <em>toast</em>?. Questa opzione è normalmente accoppiata
+                                    all'opzione
+                                    <strong> posizione </strong> e all'opzione <strong>timer</strong>.
+                                </td>
+                            </tr>
+                            <tr id="toastStyle">
+                                <td>
+                                    <h5>toastStyle</h5>
+                                </td>
+                                <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' |
+                                    'auto' | ''</td>
+                                <td>''</td>
+                                <td>Per impostazione predefinita il colore di sfondo toast è ereditato da bootstrap.
+                                    Impostando <code>toaststyle</code>, gli sfondi dei toast
+                                    sono disegnati usando i colori bootstrap. L'icona e il colore del testo saranno
+                                    bianchi. Se <code>toaststyle</code> è 'auto', lo stile toast
+                                    è determinato dal tipo di icona.
+                                </td>
+                            </tr>
+                            <tr id="input">
+                                <td>
+                                    <h5>input</h5>
+                                <td>
+                                    <p>'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'radio' |
+                                        'checkbox' | 'file' | 'url' | <em>undefined</em></p>
+                                </td>
+                                <td><em>undefined</em></td>
+                                <td>Tipo del campo di input, può essere <strong>text</strong>, <strong>email</strong>,
+                                    <strong>password</strong>, <strong>number</strong>,
+                                    <strong>textarea</strong>, <strong>select</strong>, <strong>radio</strong>,
+                                    <strong>checkbox</strong>, e <strong>url</strong>.
+                                </td>
+                            </tr>
+                            <tr id="position">
+                                <td>
+                                    <h5>position</h5>
+                                </td>
+                                <td>
+                                    <p>'top' | 'top-start' | 'top-end' | 'center' | 'center-start' | 'center-end' |
+                                        'bottom' | 'bottom-start' | &nbsp;'bottom-end'</p>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>Per i <em>Toast</em> <code>position</code>, può essere <strong>'top'</strong>,
+                                    <strong>'top-start'</strong>, <strong>'top-end'</strong>,
+                                    <strong>'center'</strong>, <strong>'center-start'</strong>,
+                                    <strong>'center-end'</strong>, <strong>'bottom'</strong>,
+                                    <strong>'bottom-start'</strong>, or <strong>'bottom-end', </strong>.
+                                    Per una popup la posizione può essere <strong>'center' </strong>o <strong>'top'
+                                    </strong>(altre impostazioni verranno ignorate)
+                                </td>
+                            </tr>
+                            <tr id="customClass">
+                                <td>
+                                    <h5>customClass</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>Classi CSS personalizzate per la pop-up. Queste sono le classi predefinite:
+                                    <pre>
+                    <code class="language-javascript">{
+    container: '',
+    popup: '',
+    header: 'py-0 border-0 px-3 mt-3 mb-1',
+    title: 'text-center h2 mt-3 mb-3',
+    toastTitle: 'my-0 h5',
+    closeButton: 'btn-close',
+    icon: '',
+    image: 'img-fluid mx-auto mt-4 mb-3',
+    htmlContainer: 'text-center lead',
+    toastHtml: '',
+    input: 'mt-3 mb-1',
+    inputLabel: '',
+    validationMessage: `justify-content-center d-flex rounded-0 align-items-center 
+        border-0 py-2 px-4 mt-3 mb-1 alert alert-danger`,
+    actions: 'justify-content-center border-0 py-0 px-4 mt-3 mb-1',
+    confirmButton: 'btn btn-primary',
+    denyButton: 'btn btn-danger',
+    cancelButton: 'btn btn-secondary',
+    loader: '',
+    footer: 'justify-content-center py-0 pt-2 px-4 mt-3 mb-1',
+    timerProgressBar: ''
+}</code></pre>
+                                </td>
+                            </tr>
+                            <tr id="timer">
+                                <td>
+                                    <h5>timer</h5>
+                                </td>
+                                <td>number</td>
+                                <td>0</td>
+                                <td>Timeout di chiusura automatica del popup (o della notifica toast). Impostato in
+                                    millisecondi.</td>
+                            </tr>
+                            <tr id="timerProgressBar">
+                                <td>
+                                    <h5>timerProgressBar</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Se impostato su True, il progresso timer sarà segnalato da una barra di avanzamento
+                                    nella parte inferiore
+                                    del popup.(Non influisce sui toast)</td>
+                            </tr>
+                            <tr id="allowOutsideClick">
+                                <td>
+                                    <h5>allowOutsideClick</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup facendo
+                                    clic sul backdrop.</td>
+                            </tr>
+                            <tr id="allowEscapeKey">
+                                <td>
+                                    <h5>allowEscapeKey</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup
+                                    premendo il tasto <kbd>Esc</kbd>.</td>
+                            </tr>
+                            <tr id="showConfirmButton">
+                                <td>
+                                    <h5>showConfirmButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Se impostato su <strong> false </strong>, Il pulsante "conferma" non verrà mostrato.
+                                </td>
+                            </tr>
+                            <tr id="showDenyButton">
+                                <td>
+                                    <h5>showDenyButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Se impostato su <strong> vero </strong>, verrà mostrato il pulsante "rifiuta". Può
+                                    essere utile quando si desidera un popup con 3 pulsanti.</td>
+                            </tr>
+                            <tr id="showCancelButton">
+                                <td>
+                                    <h5>showCancelButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Se impostato su <strong> true </strong>, verrà visualizzato il pulsante "annulla".
+                                </td>
+                            </tr>
+                            <tr id="confirmButtonText">
+                                <td>
+                                    <h5>confirmButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'Ok'</td>
+                                <td>Modifica il testo del pulsante "conferma".</td>
+                            </tr>
+                            <tr id="denyButtonText">
+                                <td>
+                                    <h5>denyButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'No'</td>
+                                <td>Modifica il testo del pulsante "rifiuta".</td>
+                            </tr>
+                            <tr id="cancelButtonText">
+                                <td>
+                                    <h5>cancelButtonText</h5>
+                                </td>
+                                <td>string</td>
+                                <td>'Cancel'</td>
+                                <td>Modifica il testo del pulsante "annulla".</td>
+                            </tr>
+                            <tr id="showCloseButton">
+                                <td>
+                                    <h5>showCloseButton</h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Impostare su <strong> true </strong> per mostrare il pulsante di chiusura
+                                    nell'angolo in alto a destra del popup.</td>
+                            </tr>
+                            <tr id="preConfirm">
+                                <td>
+                                    <h5>preConfirm</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funzione da eseguire prima di confermare, può essere asincrona (returning a Promise)
+                                    o sincrona. <br />
+                                    Il valore restituito (o risolto nella Promise) può essere:
+                                    <ul>
+                                        <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
+                                        <li> qualsiasi altra cosa per passare quel valore come <strong> result.value
+                                            </strong> di <strong> swal.fire () </strong> </li>
+                                        <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
+                                    </ul>
+                                    Vedi questo <a href="basic-examples.html#ajax-request-example">esempio di richiesta
+                                        ajax</a>.
+                                </td>
+                            </tr>
+                            <tr id="preDeny">
+                                <td>
+                                    <h5>preDeny</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funzione da eseguire prima di <em>rifiutare</em>, può essere asincrone (Promise) o
+                                    sincrona. <br />
+                                    Il valore restituito (o risolto) può essere:
+                                    <ul>
+                                        <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
+                                        <li> qualsiasi altra cosa per passare quel valore come <strong> result.value
+                                            </strong> di <strong> swal.fire () </strong> </li>
+                                        <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr id="imageUrl">
+                                <td>
+                                    <h5>imageUrl</h5>
+                                </td>
+                                <td>string</td>
+                                <td><em>''</em></td>
+                                <td>Aggiungi un'icona o un'immagine personalizzata alla popup. Deve contenere l'URL
+                                    dell'immagine.</td>
+                            </tr>
+                            <tr id="imageAlt">
+                                <td>
+                                    <h5>imageAlt</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Un testo alternativo per l'immagine personalizzata.</td>
+                            </tr>
+                            <tr id="inputPlaceholder">
+                                <td>
+                                    <h5>inputPlaceholder</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Placeholder del campo di input.</td>
+                            </tr>
+                            <tr id="inputValue">
+                                <td>
+                                    <h5>inputValue</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>
+                                    <p>Valore iniziale del campo di input.</p>
+
+                                    <ul>
+                                        <li> Se il tipo di input è <code>select</code>, inputValue rappresenterà la
+                                            <code> &lt;opzion&gt; & nbsp; </code> selezionata. </li>
+                                        <li> Se il tipo di input è <code>checkbox</code> InputValue rappresenterà lo
+                                            stato selezionato (true/false). </li>
+                                        <li> Se il tipo di input è <code>text</code>, <code>email</code>,
+                                            <code>numero</code> o <code>textarea</code>
+                                            inputValue rappresenta il valore iniziale del campo. </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr id="inputOptions">
+                                <td>
+                                    <h5>inputOptions</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>Se <code>input</code> è impostato su <strong>"select"</strong> o
+                                    <strong>"radio"</strong>, puoi fornire l'elenco delle opzioni disponibili. È un
+                                    oggetto semplice,
+                                    in cui le proprietà rappresentano il testo delle opzioni e i valori i valori
+                                    dell'opzione.
+                                </td>
+                            </tr>
+                            <tr id="inputAttributes">
+                                <td>
+                                    <h5>inputAttributes</h5>
+                                </td>
+                                <td>object</td>
+                                <td>{}</td>
+                                <td>Attributi HTML del campo di input HTML (ad es. <strong>min</strong>,
+                                    <strong>max</strong>,
+                                    <strong>autocomplete</strong>, <strong>accept</strong>), che vengono aggiunti al
+                                    campo di input. L
+                                    e chiavi dell'oggetto rappresenteranno i nomi degli attributi, i valori delle
+                                    proprietà rappresenteranno
+                                    i valori degli attributi.
+                                </td>
+                            </tr>
+                            <tr id="validationMessage">
+                                <td>
+                                    <h5>validationMessage</h5>
+                                </td>
+                                <td>string</td>
+                                <td>''</td>
+                                <td>Un messaggio di convalida personalizzato per la convalida predefinita (tipi di input
+                                    e -mail e URL).</td>
+                            </tr>
+                            <tr id="willOpen">
+                                <td>
+                                    <h5>willOpen</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funziona sincrona che viene lanciata prima che il popup venga mostrato sullo
+                                    schermo. Fornisce l'elemento
+                                    DOM popup come argomento.</td>
+                            </tr>
+                            <tr id="didOpen">
+                                <td>
+                                    <h5>didOpen</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funziona sincrona che viene lanciata dopo che la popup è mostrata sullo schermo.
+                                    Fornisce l'elemento
+                                    DOM popup come argomento.</td>
+                            </tr>
+                            <tr id="willClose">
+                                <td>
+                                    <h5>willClose</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funziona sincrona che viene lanciata prima che la popup sia chiusa. Fornisce
+                                    l'elemento
+                                    DOM popup come argomento.</td>
+                            </tr>
+                            <tr id="didClose">
+                                <td>
+                                    <h5>didClose</h5>
+                                </td>
+                                <td>function | <em>undefined</em></td>
+                                <td><em>undefined</em></td>
+                                <td>Funziona sincrona che viene lanciata dopo che la popup è stata chiusa. Fornisce
+                                    l'elemento
+                                    DOM popup come argomento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h1>Metodi</h1>
+                <div class="table-responsive-md">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr class="titles">
+                                <th>Method</th>
+                                <th>Returns</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.isVisible()</code></h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>Determine if popup is shown.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.close()</code></h5>
+                                </td>
+                                <td>void</td>
+                                <td>Close the currently open SweetAlert2 popup programmatically, the Promise returned by
+                                    <strong>Swal.fire()</strong> will be resolved with an empty object <strong
+                                        class="nowrap">{ }</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getContainer()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the popup container which contains the backdrop and the popup itself.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getTitle()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the popup title.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getCloseButton()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the close button.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getIcon()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the <a href="icons.html">icon</a>.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getHtmlContainer()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Gets the DOM element where the <strong>html</strong>/<strong>text</strong> parameter
+                                    is rendered to.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getImage()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the <a href="basic-examples.html#custom-image">image</a>.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getFooter()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the popup footer.</td>
+                            </tr>
+                            <tr id="getConfirmButton">
+                                <td>
+                                    <h5><code>Swal.getConfirmButton()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the &quot;Confirm&quot; button.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getDenyButton()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the &quot;Deny&quot; button.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getCancelButton()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the &quot;Cancel&quot; button.</td>
+                            </tr>
+                            <tr id="showLoading">
+                                <td>
+                                    <h5><code>Swal.showLoading()</code></h5>
+                                </td>
+                                <td>void</td>
+                                <td>Shows loader (spinner), this is useful with AJAX requests.<br />
+                                    <br />
+                                    By default the loader be shown instead of the &quot;Confirm&quot; button, but if you
+                                    want another button to be replaced with a loader, just pass it like this: <strong
+                                        class="nowrap">Swal.showLoading(Swal.getDenyButton())</strong>
+                                </td>
+                            </tr>
+                            <tr id="hideLoading">
+                                <td>
+                                    <h5><code>Swal.hideLoading()</code></h5>
+                                </td>
+                                <td>void</td>
+                                <td>Hides loader and shows back the button which was hidden by .showLoading()</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.isLoading()</code></h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>Determine if popup is in the loading state. Related methods: <a class="nowrap"
+                                        href="#showLoading">Swal.showLoading()</a> and <a class="nowrap"
+                                        href="#hideLoading">Swal.hideLoading()</a></td>
+                            </tr>
+                            <tr id="getTimerLeft">
+                                <td>
+                                    <h5><code>Swal.getTimerLeft()</code></h5>
+                                </td>
+                                <td>number</td>
+                                <td>Returns the time left in case when timer parameter is set. <a
+                                        href="basic-examples.html#basic-timer-example">See basic timer example</a>.</td>
+                            </tr>
+                            <tr id="stopTimer">
+                                <td>
+                                    <h5><code>Swal.stopTimer()</code></h5>
+                                </td>
+                                <td>number</td>
+                                <td>Stops the timer in case when timer parameter is set. Returns the time left. <a
+                                        href="basic-examples.html#timer-methods-example">See timer method example</a>.
+                                </td>
+                            </tr>
+                            <tr id="resumeTimer">
+                                <td>
+                                    <h5><code>Swal.resumeTimer()</code></h5>
+                                </td>
+                                <td>number</td>
+                                <td>Resume the timer previously stopped. Returns the time left. <a
+                                        href="basic-examples.html#timer-methods-example">See timer method example</a>.
+                                </td>
+                            </tr>
+                            <tr id="toggleTimer">
+                                <td>
+                                    <h5><code>Swal.toggleTimer()</code></h5>
+                                </td>
+                                <td>number</td>
+                                <td>Toggle state of the timer between stopped and running. Returns the time left. <a
+                                        href="basic-examples.html#timer-methods-example">See timer method example</a>.
+                                </td>
+                            </tr>
+                            <tr id="isTimerRunning">
+                                <td>
+                                    <h5><code>Swal.isTimerRunning()</code></h5>
+                                </td>
+                                <td>boolean</td>
+                                <td>Returns the status of the timer: <strong>true</strong> if is running,
+                                    <strong>false</strong> if it&#39;s paused.</td>
+                            </tr>
+                            <tr id="increaseTimer">
+                                <td>
+                                    <h5><code>Swal.increaseTimer(number n)</code></h5>
+                                </td>
+                                <td>number</td>
+                                <td>Increase the timer by <strong>n</strong> milliseconds. Returns the time left. <a
+                                        href="basic-examples.html#timer-methods-example">See timer method example</a>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getInput()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the input DOM node, this method works with input parameter.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getInputValue()</code></h5>
+                                </td>
+                                <td>boolean | string</td>
+                                <td>Get the value of the input. If input is text, email, password, number, textarea, url
+                                    or select returns the <code>value</code>
+                                    of the element, if input is checkbox returns the checkbox state (true | false), if
+                                    input is radio return the
+                                    <code>value</code> of checked option or <code>null</code> if none is checked.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.showValidationMessage(string message)</code></h5>
+                                </td>
+                                <td>void</td>
+                                <td>Show an error message inside the validation message DOM node. Passing an empty
+                                    string as parameter will hide&nbsp;the node.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5><code>Swal.getValidationMessage()</code></h5>
+                                </td>
+                                <td>HTMLElement</td>
+                                <td>Get the validation message DOM node.</td>
+                            </tr>
+                        </tbody>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr class="titles">
+                                    <th>Metodi</th>
+                                    <th>Valori restituiti</th>
+                                    <th>Descrizione</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.isVisible()</code></h5>
+                                    </td>
+                                    <td>boolean</td>
+                                    <td>Determina se la popup è visibile.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.close()</code></h5>
+                                    </td>
+                                    <td>void</td>
+                                    <td>Chiude la Popup attualmente aperta, la Promise restituita da <strong> swal.fire ()
+                                        </strong> sarà risolta
+                                        con un oggetto vuoto <strong class="NowRap"> {} </strong></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getContainer()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il contenitore che contiene lo sfondo e la popup stessa.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getTitle()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il titolo della popup.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getCloseButton()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il pulsante Chiudi.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getIcon()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce l'<a href="icons.html">icon</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getHtmlContainer()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce l'elemento DOM in cui viene reso il parametro <strong>
+                                            html</strong>/<strong>text </strong>.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getImage()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce l'<a href="basic-examples.html#custom-image">immagine</a>.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getFooter()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il footer della popup</td>
+                                </tr>
+                                <tr id="getConfirmButton">
+                                    <td>
+                                        <h5><code>Swal.getConfirmButton()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il pulsante il "conferma".</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getDenyButton()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il pulsante il "rifiuta".</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getCancelButton()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il pulsante il "annulla".</td>
+                                </tr>
+                                <tr id="showLoading">
+                                    <td>
+                                        <h5><code>Swal.showLoading()</code></h5>
+                                    </td>
+                                    <td>void</td>
+                                    <td>Mostra il loader (spinner). Utile nei momenti di attesa come per le richieste Ajax.
+                                        <br />
+                                        <br />
+                                        Il loader è mostrato invece dei pulsanti nel mezzo dell'area pulsanti.
+                                    </td>
+                                </tr>
+                                <tr id="hideLoading">
+                                    <td>
+                                        <h5><code>Swal.hideLoading()</code></h5>
+                                    </td>
+                                    <td>void</td>
+                                    <td>Nasconde il loader e mostra i pulsanti nascosti da .Showloading()</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.isLoading()</code></h5>
+                                    </td>
+                                    <td>boolean</td>
+                                    <td>Determina se il popup è nello stato di caricamento. Metodi correlati: <a
+                                            class="nowrap" href="#showLoading">Swal.showLoading()</a> and <a class="nowrap"
+                                            href="#hideLoading">Swal.hideLoading()</a></td>
+                                </tr>
+                                <tr id="getTimerLeft">
+                                    <td>
+                                        <h5><code>Swal.getTimerLeft()</code></h5>
+                                    </td>
+                                    <td>number</td>
+                                    <td>Restituisce il tempo rimanente nel caso in cui sia impostato il parametro timer.
+                                        <a href="basic-examples.html#basic-timer-example">Vedi Esempio</a>.
+                                    </td>
+                                </tr>
+                                <tr id="stopTimer">
+                                    <td>
+                                        <h5><code>Swal.stopTimer()</code></h5>
+                                    </td>
+                                    <td>number</td>
+                                    <td>Interrompe il timer nel caso in cui è impostato il parametro timer. Restituisce il
+                                        tempo rimasto.
+                                        <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.
+                                    </td>
+                                </tr>
+                                <tr id="resumeTimer">
+                                    <td>
+                                        <h5><code>Swal.resumeTimer()</code></h5>
+                                    </td>
+                                    <td>number</td>
+                                    <td>Riprende il timer precedentemente fermato. Restituisce il tempo rimasto.
+                                        <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.
+                                    </td>
+                                </tr>
+                                <tr id="toggleTimer">
+                                    <td>
+                                        <h5><code>Swal.toggleTimer()</code></h5>
+                                    </td>
+                                    <td>number</td>
+                                    <td>Attiva/disattiva il timer. Restituisce il tempo rimasto.
+                                        <a href="basic-examples.html#timer-methods-example">Vedi esmpio</a>.
+                                    </td>
+                                </tr>
+                                <tr id="isTimerRunning">
+                                    <td>
+                                        <h5><code>Swal.isTimerRunning()</code></h5>
+                                    </td>
+                                    <td>boolean</td>
+                                    <td>Restituisce lo stato del timer: <strong> vero </strong> se è in esecuzione,
+                                        <strong> false </strong> se si è in pausa.
+                                    </td>
+                                </tr>
+                                <tr id="increaseTimer">
+                                    <td>
+                                        <h5><code>Swal.increaseTimer(number n)</code></h5>
+                                    </td>
+                                    <td>number</td>
+                                    <td>Aumenta il timer di <strong> n </strong> millisecondi. Restituisce il tempo rimasto.
+                                        <a href="basic-examples.html#timer-methods-example">Vedi esempio</a>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getInput()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il nodo DOM di input, questo metodo funziona con il parametro di input.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getInputValue()</code></h5>
+                                    </td>
+                                    <td>boolean | string</td>
+                                    <td>Restituisce il valore dell'input. Se l'input è testo, e-mail, password, numero,
+                                        textarea, URL o select
+                                        restituisce il <code>value </code> dell'elemento, se l'input è una checkbox
+                                        restituisce lo stato della
+                                        checkbox (true|false), se l'input è un gruppo di radio buttons restituisce il
+                                        <code>value</code> dell'opzione selezionata o <code>NULL</code> Se nessuno opzione è
+                                        selezionata.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.showValidationMessage(string message)</code></h5>
+                                    </td>
+                                    <td>void</td>
+                                    <td>Mostra un messaggio di errore all'interno del nodo DOM del messaggio di convalida.
+                                        Passando una stringa vuota come parametro nasconderà & nbsp; il nodo.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5><code>Swal.getValidationMessage()</code></h5>
+                                    </td>
+                                    <td>HTMLElement</td>
+                                    <td>Restituisce il nodo DOM del messaggio di convalida.</td>
+                                </tr>
+                            </tbody>
+                        </table>                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js'
+        integrity='sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ=='
+        crossorigin='anonymous'></script>
+    <script src="assets/js/swalstrap5_all.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

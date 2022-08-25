@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <title>Documentation</title>
+    <!-- Required meta tags -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css'
+        integrity='sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q=='
+        crossorigin='anonymous' />
+
+    <!-- Convert this to an external style sheet -->
+    <style>
+        .navbar-brand {
+            height: 46px;
+        }
+
+        main > .container {
+            padding: 100px 15px 0;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fm-light fixed-top">
+        <div class="container justify-content-between">
+            <a class="navbar-brand p-0 d-flex align-items-center" href="#">
+                <svg id="Livello_1" class="me-2 h-100" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 435.93 485.88">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffa300;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M326.24,485.88H62.16c16.51-31,33.09-62.05,49.5-93.15,3.18-6,5.9-12.32,8.52-18.63,2-4.72.79-5.5-4-6.37-5.43-1-11.21-2.22-15.83-5C90.11,356.57,83,347.24,77.77,336.58a18.48,18.48,0,0,1-2.22-7.1c-.58-16.64.2-33.4,8.3-48.2,4.3-7.86,4-13.15-1.06-20-4.74-6.46-8.26-14-6-22.48a41.74,41.74,0,0,0-2.29-28.36c-5.69-12.77-12.22-25.15-18.24-37.77-5.76-12.08-14.35-19.23-28.6-18.22-5.5.39-9.85-2.21-12.23-7.78a7.42,7.42,0,0,0-4.75-3.48c-9.59-2-13.62-9-8.37-17.22A87.73,87.73,0,0,1,18.7,106.73c17.4-15,37.89-25,59.35-32.48C123.84,58.29,169.67,42.37,216,28,258,15,301,5.12,344.9.6a111.08,111.08,0,0,1,29.76.89c10.58,1.82,14.62,11,10.79,21-1.37,3.57-1.34,6.35,1.86,8.82,3.8,2.94,3.26,6.24.36,9.45-3.24,3.58-6.31,7.39-9.94,10.54-8.56,7.41-11.13,16.68-9.36,27.47A117.26,117.26,0,0,0,370.93,91c4.46,16.06,8.94,32.11,13.68,48.09a139.08,139.08,0,0,0,6.82,18.72c2,4.43,2.34,8.2-.56,12.13-3.31,4.47-3.41,9.23-2.54,14.67,1,5.93,1.62,12.42.14,18.08-2,7.57-2.11,14,3,20.14,2.24,2.67,4.24,5.58,6.67,8.07,10.62,10.83,21.23,21.67,32.09,32.24,6,5.85,6.22,13.05,5.24,20.34-.31,2.27-2.94,4.87-5.18,6.11a112.25,112.25,0,0,1-15.06,6.6c-7.88,2.94-10.9,7.46-10.22,15.81.39,4.65,1,12.35.68,17-.3,3.83-5.07,4.51-5.88,8.32-.48,2.26,2.87.92,3.6,2.92,2.18,6,1.45,15.23-3.38,20.14a21.11,21.11,0,0,0-3.95,6.33A11,11,0,0,0,397,378c7.41,10.92,3.15,26.36-7,32.18a228.42,228.42,0,0,1-41.87,18.59c-11.09,3.67-23.19,4.34-34.87,6.09-4.12.62-6.64,2.33-6.42,6.65.29,6,1,11.89,1.29,17.84.45,9.17,3.56,16.74,11.81,21.66A63.45,63.45,0,0,1,326.24,485.88Z" />
+                </svg>
+                <span class="h2 mt-n2 fw-light">sistem<span class="fw-bold">interattivi</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            </div>
+            <script>
+                (function (doc) {
+                    const targetElement = doc.querySelector('#navbarCollapse');
+                    fetch('menu.xml')
+                        .then(response => response.text())
+                        .then(result => targetElement.innerHTML = result)
+                        .catch(error => console.error(error));
+                })(document);
+            </script>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column justify-content-between align-items-stretch min-vh-100" style="padding-top: 62px">
+        <div class="text-white bg-secondary py-5 flex-grow-0">
+            <div class="container">
+                <h1 class="display-3 mb-4 d-flex justify-content-between align-items-center">
+                    Swalstrap<img src="img/it.svg" style="height: 2rem; " alt="Bandiera Italiana"></h1>
+                <p class="lead">Un alternativa a <strong>Sweetalert</strong> e <strong>Bootbox</strong> basata sulle componenti Modal e Toast di Bootstrap.</p>
+            </div>
+        </div>
+        <main class="flex-shrink-0">
+            <div class="container pt-4">
+            </div>
+        </main>
+    </div>
+    <!-- Bootstrap JS -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js' 
+        integrity='sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==' 
+        crossorigin='anonymous'></script>   
+    <script>
+        (function (doc) {
+            "use strict";
+            const targetElement = doc.querySelector('main > .container');
+            fetch('documentation-it.xml')
+                .then(response => response.text())
+                .then(result => {
+                    targetElement.innerHTML = result;
+                    targetElement.querySelectorAll('pre code').forEach((el) => {
+                        hljs.highlightElement(el);
+                    });
+                    targetElement.querySelectorAll('table').forEach((el) => {
+                        el.classList.add('table');
+                    });
+                    targetElement.querySelectorAll('blockquote').forEach((el) => {
+                        el.classList.add('alert','alert-warning');
+                    });
+                })
+                .catch(error => console.error(error));
+        })(document);
+    </script>
+</body>
+</html>
