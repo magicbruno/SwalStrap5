@@ -43,7 +43,7 @@
         </ul>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Examples</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Examples</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
                 <a class="dropdown-item" href="basic-examples.html">Basic</a>
