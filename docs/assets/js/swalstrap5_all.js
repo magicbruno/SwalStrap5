@@ -4,7 +4,7 @@
  * (c) Bruno Migliaretti 2022
  * https://github.com/magicbruno/SwalStrap5
  * 
- * Version 1.0.8
+ * Version 1.0.10
  **********************************************/
 (function (doc, win) {
     "use strict";
@@ -249,7 +249,7 @@
          * property: Toast content based on config
          */
         get toastContent() {
-            return `<div class="toast toast-swal position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
+            return `<div class="toast toast-swal position-fixed align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
                         aria-live="assertive" aria-atomic="true" id="toast_${this.currentId}">
                         <div class="d-flex align-items-center">
                             <div class="toast-icon-container ${this.display('icon')} ${!this.toastBackground && this.config.icon == 'success' ? 'text-success' : ''}" data-swalstrap="icon">
